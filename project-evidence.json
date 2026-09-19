@@ -1,0 +1,119 @@
+{
+  "project": "Saudi Pharma Commercial Intelligence",
+  "source": "Published PBIX snapshot; synthetic training data",
+  "data_as_of": "2026-08-31",
+  "metrics": {
+    "rows": {
+      "Pharma_Sales": 150000,
+      "Sales_Targets": 2592,
+      "Inventory": 1080,
+      "Linked_Drugs": 180,
+      "Customers": 1200,
+      "Sales_Agents": 72,
+      "Suppliers": 40,
+      "Warehouses": 6,
+      "Geography": 27,
+      "Date": 1096
+    },
+    "period": [
+      "2023-09-01 00:00:00",
+      "2026-08-31 00:00:00"
+    ],
+    "net_sales": 241967508.82,
+    "gross_sales": 256789996.85,
+    "discounts": 14095303.290000001,
+    "returns_value": 727184.74,
+    "gross_profit": 77293391.47,
+    "gross_margin_pct": 31.94370675919909,
+    "target": 248986592.66000003,
+    "achievement_pct": 97.1809390357075,
+    "target_variance": -7019083.840000033,
+    "invoice_count": 48613,
+    "products_sold": 177,
+    "customers_served": 1148,
+    "units_sold": 6020262.0,
+    "returned_units": 18197.0,
+    "inventory_value": 7920403.77,
+    "inventory_units": 291210,
+    "inventory_coverage": 53.178453969894576,
+    "expiry_risk_value": 825385.46,
+    "expiry_risk_positions": 115,
+    "stockouts": 27,
+    "below_reorder": 182,
+    "reorder_gap": 11006,
+    "duplicate_sales_lines": 0,
+    "duplicate_target_grain": 0,
+    "duplicate_inventory_grain": 0,
+    "gross_to_net_difference": 0.0,
+    "return_rate_pct": 0.30226259255826404,
+    "relationships_checks": [
+      {
+        "from": "Pharma_Sales.DateKey",
+        "to": "Date.DateKey",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0,
+        "comparison_note": "Compared after normalizing extracted key types to text."
+      },
+      {
+        "from": "Sales_Targets.TargetMonthDateKey",
+        "to": "Date.DateKey",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Pharma_Sales.CustomerID",
+        "to": "Customers.CustomerID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Pharma_Sales.DrugID",
+        "to": "Linked_Drugs.DrugID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Pharma_Sales.SalesAgentID",
+        "to": "Sales_Agents.SalesAgentID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Pharma_Sales.WarehouseID",
+        "to": "Warehouses.WarehouseID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Customers.CityID",
+        "to": "Geography.CityID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Inventory.DrugID",
+        "to": "Linked_Drugs.DrugID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Inventory.SupplierID",
+        "to": "Suppliers.SupplierID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Inventory.WarehouseID",
+        "to": "Warehouses.WarehouseID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      },
+      {
+        "from": "Sales_Targets.SalesAgentID",
+        "to": "Sales_Agents.SalesAgentID",
+        "unmatched_rows": 0,
+        "dimension_duplicate_keys": 0
+      }
+    ]
+  }
+}

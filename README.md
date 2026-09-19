@@ -1,65 +1,82 @@
-# Shamseldeen Ismaiil — Data Analyst Portfolio
+# Shams Insights — Shamseldeen Ismaiil
 
-Personal portfolio website presenting my transition from more than 10 years of retail pharmacy operations into Data Analytics and Business Intelligence.
+Portfolio connecting 10+ years in retail pharmacy with hands-on data analytics and business intelligence.
 
-The portfolio combines my pharmacy and healthcare domain experience with practical skills in SQL, Python, Power BI, Tableau, Excel, data warehousing, KPI analysis, and dashboard development.
+- **Portfolio:** [shamsinsights.com](https://shamsinsights.com/)
+- **Flagship case study:** [Saudi Pharma Commercial Intelligence](https://shamsinsights.com/saudi-pharma.html)
+- **CV:** [View / download](https://shamsinsights.com/assets/Shamseldeen_Ismaiil_Data_Analyst_CV.pdf)
+- **Email:** [shams@shamsinsights.com](mailto:shams@shamsinsights.com)
+- **LinkedIn:** [Shamseldeen Ismaiil](https://www.linkedin.com/in/shamseldeen-ismaiil-53186097)
 
-## Live Portfolio
+## Flagship project
 
-**[shamseldeen.github.io](https://shamseldeen.github.io/)**
+Saudi Pharma Commercial Intelligence is a six-page Power BI report for a fictional Saudi pharmaceutical distributor. It covers sales, profitability, products, customers, sales-agent targets and inventory risk. All business data is synthetic; there is no employer or patient data.
 
-## Curriculum Vitae
+The case study includes a live report, screenshots and walkthroughs for every page, a user guide (with an Arabic quick-start), model grain and relationships, a metric dictionary, findings, validation and current limitations.
 
-My latest one-page ATS Data Analyst CV can be viewed or downloaded directly from the portfolio.
+### Verified dataset scope
 
-**[View / Download CV](https://shamseldeen.github.io/assets/Shamseldeen_Ismaiil_Data_Analyst_CV.pdf)**
+| Dataset | Rows / count | Grain |
+| --- | ---: | --- |
+| Sales | 150,000 | Invoice line |
+| Distinct invoices | 48,613 | Invoice |
+| Targets | 2,592 | Month × sales agent |
+| Inventory | 1,080 | Warehouse × SKU at 31 Aug 2026 |
+| Products | 180 | Product master; 177 have sales |
+| Customers | 1,200 | Customer master; 1,148 have sales |
+| Sales agents | 72 | Sales agent |
+| Suppliers / warehouses | 40 / 6 | Reference entities |
 
-## Featured Project
+Sales coverage: **1 Sep 2023–31 Aug 2026**. The source contains **70 DAX measures**, including helper and formatting definitions, and **11 active single-direction relationships**.
 
-### Pharmacy Enterprise Data Warehouse
+### Report pages
 
-An in-progress enterprise analytics platform designed to integrate simulated pharmacy data from ERP, POS, CRM, prescriptions, insurance, inventory, supply chain, and delivery systems.
+1. Executive Overview
+2. Sales Performance
+3. Products & Categories
+4. Customers & Channels
+5. Agents & Targets
+6. Inventory & Expiry
 
-The project follows a Medallion Architecture:
+### Use and interpretation
 
-```text
-Source Systems → Bronze → Silver → Gold → Power BI / SQL / Python
-```
+Load the report from the case-study page, choose an analytical question, select the corresponding page and inspect the relevant filters. On a phone, landscape orientation or the direct full-report link offers more space. The website's Reset report control reloads the embedded report.
 
-Repository: **[pharmacy-enterprise-data-warehouse](https://github.com/shamseldeen/pharmacy-enterprise-data-warehouse)**
+For target comparisons, keep the customer **Region** filter at **All**. The customer-geography filter changes sales without reducing the target denominator in the current model. Use period and agent selections or the territory chart for target analysis. Inventory is a single snapshot, and expiry exposure flags the full value of positions based on nearest expiry; it is not a confirmed loss estimate.
 
-Supporting data-generation project: **[pharmacy-chain-data-platform-sql](https://github.com/shamseldeen/pharmacy-chain-data-platform-sql)**
+## Technical references
 
-## Portfolio Sections
+- [All 70 DAX definitions](power-bi-measures.md)
+- [Project data and checks](project-evidence.json)
+- [Published public report](https://app.powerbi.com/view?r=eyJrIjoiYmM0NGQ0MmUtZmJlMi00YWZhLTk5MGMtZTA5YzU3OTdiNGZhIiwidCI6ImUyNTlmZjI5LTQyOTgtNDcyNC1hNGYxLWUwNjJhN2ViY2FiNyJ9&pageName=b666e32ee00e3b344f02)
 
-- Professional introduction and pharmacy analytics positioning
-- Technical and business capabilities
-- Featured and supporting projects
-- Professional experience at Aldawaa Pharmacies
-- Education and contact information
-- Viewable and downloadable Data Analyst CV
+Stored-data checks include unique grains, relationship-key matching (with extracted key types aligned), and gross-to-net reconciliation. The calculations and selected report interactions were checked; this is not exhaustive verification of all DAX contexts.
 
-## Technologies
+## Other portfolio work
 
-- HTML5
-- CSS3
-- JavaScript
-- Responsive design
-- GitHub Pages
+- [Pharmacy Enterprise Data Warehouse](https://github.com/shamseldeen/pharmacy-enterprise-data-warehouse) — in development; Bronze ingestion checkpoint shown on the portfolio.
+- [Synthetic Pharmacy Data Platform](https://github.com/shamseldeen/pharmacy-chain-data-platform-sql) — supporting work in development.
+- [Histopathology Image Exploration](https://github.com/shamseldeen/Ovarian-cancer) — exploratory machine-learning notebook.
 
-## Project Files
+## Website implementation
 
-```text
-Shamseldeen.github.io/
-├── assets/
-│   └── Shamseldeen_Ismaiil_Data_Analyst_CV.pdf
-├── index.html    # Portfolio content and structure
-├── style.css     # Visual design and responsive layout
-├── script.js     # Navigation, date, and reveal interactions
-└── README.md     # Project documentation
-```
+Plain HTML, CSS and JavaScript on GitHub Pages. No build step or framework is required.
 
-## Run Locally
+| File | Purpose |
+| --- | --- |
+| `index.html` | Professional introduction, flagship and supporting work, experience and contact |
+| `saudi-pharma.html` | Complete flagship case study and interactive report |
+| `style.css` | Shared styling and responsive layouts |
+| `script.js` | Navigation, on-demand report loading and reset |
+| `p00-*.jpg` | Actual screenshots from the published report |
+| `power-bi-measures.md` | Extracted DAX reference |
+| `project-evidence.json` | Dataset snapshot and validation results |
+| `assets/` | Existing CV and project assets |
+| `CNAME` | Custom GitHub Pages domain |
+
+The report loads on demand. Screenshots, descriptions and direct links remain available if the embedded report cannot load. Main content stays readable without JavaScript, and navigation supports keyboard use.
+
+## Run locally
 
 ```bash
 git clone https://github.com/shamseldeen/Shamseldeen.github.io.git
@@ -67,38 +84,8 @@ cd Shamseldeen.github.io
 python -m http.server 8000
 ```
 
-Then visit:
+Open `http://localhost:8000`. GitHub Pages deploys updates from `main`.
 
-```text
-http://localhost:8000
-```
+## Updating the case study
 
-## Deployment
-
-The website is deployed with GitHub Pages from the `main` branch.
-
-Updates pushed to the portfolio files are published automatically after GitHub Pages finishes building.
-
-## Current Status
-
-The portfolio is updated progressively as the Pharmacy Enterprise Data Warehouse moves through:
-
-1. Source-system and architecture design
-2. Synthetic data generation
-3. Bronze ingestion
-4. Silver cleaning and conformance
-5. Data-quality testing and reconciliation
-6. Gold dimensional modeling
-7. SQL analytics and KPI development
-8. Power BI reporting
-9. Python analysis and machine learning
-
-## Contact
-
-- **LinkedIn:** [shamseldeen-ismaiil-53186097](https://www.linkedin.com/in/shamseldeen-ismaiil-53186097)
-- **GitHub:** [shamseldeen](https://github.com/shamseldeen)
-- **Email:** [pharmacian2050@gmail.com](mailto:pharmacian2050@gmail.com)
-
----
-
-© 2026 Shamseldeen Ismaiil
+When the PBIX or public report changes, refresh its screenshots, metrics, DAX reference and interpretation notes together. Screenshots and the written baseline describe the documented snapshot; the embedded report is hosted separately in Power BI.
