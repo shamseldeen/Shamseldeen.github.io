@@ -1,0 +1,63 @@
+/* Food study: progressive disclosure keeps the case study easy to scan. */
+.food-findings { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.8rem; }
+.food-finding { min-width:0; padding:1.6rem; background:var(--paper); border:1px solid var(--line); border-top:3px solid var(--green); border-radius:6px; }
+.food-finding strong { display:block; font:700 2.3rem/1.2 "DM Sans",sans-serif; letter-spacing:-.04em; margin-bottom:.8rem; color:var(--green); }
+.food-finding h3 { font-size:1.05rem; margin-bottom:.6rem; }
+.food-finding p { font-size:.91rem; color:var(--muted); margin:0; }
+.food-study .learning-hero { padding-bottom:2.5rem; }
+.food-study .learning-hero h1 { max-width:1000px; font-size:clamp(2.5rem,5.1vw,4.8rem); }
+.food-study .hero-actions { margin-bottom:1.3rem; }
+.food-study .learning-section { scroll-margin-top:110px; }
+.food-study .learning-section h2 { max-width:950px; }
+.study-back { display:inline-flex; align-items:center; min-height:44px; color:var(--green); font-size:.88rem; text-decoration:underline; text-underline-offset:4px; margin-bottom:1.5rem; }
+.study-contents { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.5rem; }
+.study-contents a { padding:.5rem .85rem; border:1px solid var(--line); border-radius:5px; font-size:.85rem; min-height:44px; display:flex; align-items:center; background:var(--paper); }
+.study-contents a:hover { background:var(--mint); border-color:var(--green); }
+.study-note { padding:1rem 1.3rem; margin:1.4rem 0; border-inline-start:3px solid var(--green); background:var(--mint); border-radius:0 5px 5px 0; font-size:.93rem; max-width:1000px; }
+.study-note p:last-child { margin-bottom:0; }
+.study-figure { margin:1.8rem 0; min-width:0; }
+.study-figure img { width:100%; height:auto; border:1px solid var(--line); border-radius:6px; background:var(--paper); }
+.study-figure figcaption { margin-top:.65rem; }
+.food-study .table-scroll { margin-block:1.3rem; }
+.food-study td,.food-study th { padding:.8rem 1rem; }
+.food-study td[data-number] { font-variant-numeric:tabular-nums; white-space:nowrap; }
+.study-details { border:1px solid var(--line); border-radius:6px; background:var(--paper); margin:1.2rem 0; min-width:0; }
+.study-details > summary { cursor:pointer; padding:1rem 1.2rem; font-weight:600; color:var(--green); min-height:48px; }
+.study-details > summary:hover { background:var(--mint); }
+.study-details[open] > summary { border-bottom:1px solid var(--line); }
+.study-details summary:focus-visible { outline:3px solid var(--orange); outline-offset:3px; }
+.study-details-body { padding:1.3rem; min-width:0; }
+.food-study pre { margin:0; padding:1.3rem; overflow:auto; max-width:100%; direction:ltr; text-align:left; background:#102a43; color:#edf7f4; font:400 .8rem/1.75 "IBM Plex Mono",monospace; tab-size:4; }
+.food-study pre:focus-visible { outline:3px solid var(--orange); outline-offset:-3px; }
+.food-study pre code { font:inherit; direction:ltr; }
+.food-study .source-code { max-height:36rem; }
+.archive-cell { min-width:0; margin-bottom:1.2rem; }
+.archive-cell-label { display:block; margin-bottom:.5rem; color:var(--muted); font:500 .7rem/1.5 "IBM Plex Mono",monospace; text-transform:uppercase; }
+.archive-text { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.93rem; line-height:1.8; }
+.archive-text h3,.archive-text h4 { margin:.7rem 0; font-family:"DM Sans",sans-serif!important; line-height:1.45!important; font-size:1.1rem!important; }
+.archive-text a { text-decoration:underline; text-underline-offset:3px; }
+html[lang=ar] .food-study .archive-text,html[lang=ar] .food-study .archive-text p { direction:ltr; text-align:left; }
+.food-study .source-downloads { display:flex; flex-wrap:wrap; gap:.6rem 1.4rem; margin:1rem 0; }
+.source-downloads a { color:var(--green); text-decoration:underline; text-underline-offset:4px; min-height:44px; display:flex; align-items:center; }
+.food-study .section-intro { max-width:950px; }
+.food-study .study-feature > * { min-width:0; }
+.study-methods { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; padding:0; list-style:none; margin:1.6rem 0; }
+.study-methods li { padding:1.25rem; border:1px solid var(--line); border-radius:5px; background:var(--paper); }
+.study-methods strong { display:block; margin-bottom:.5rem; color:var(--green); }
+.study-methods p { margin:0; font-size:.92rem; }
+html[lang=ar] .food-study .study-methods { padding:0; }
+html[lang=ar] .food-study .food-finding strong { direction:ltr; text-align:right; }
+html[lang=ar] .food-study .study-note { border-radius:5px 0 0 5px; }
+@media(max-width:760px) {
+  .food-findings,.study-methods { grid-template-columns:1fr; }
+  .food-finding { padding:1.2rem; }
+  .food-finding strong { font-size:2rem; }
+  .food-study .learning-section { scroll-margin-top:95px; }
+  .food-study .learning-section h2 { font-size:clamp(1.8rem,6vw,2.6rem); }
+  .food-study .learning-hero h1 { font-size:clamp(2.3rem,8vw,3.4rem); }
+  .food-study .hero-actions .button { width:100%; }
+  .study-details-body { padding:1rem; }
+  .food-study pre { padding:1rem; font-size:.75rem; }
+  .food-study .study-contents a { font-size:.8rem; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

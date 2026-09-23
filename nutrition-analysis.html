@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Food analysis, results and notebook | Shams Insights</title><meta name="description" content="Read the complete Food study: data cleaning, vitamin C, water and energy, regression results, reproducible Python and the archived 2023 notebook. No sign-in."><meta property="og:title" content="Food analysis, results and notebook | Shams Insights"><meta property="og:description" content="Read the complete Food study: data cleaning, vitamin C, water and energy, regression results, reproducible Python and the archived 2023 notebook. No sign-in."><meta property="og:type" content="website"><meta property="og:url" content="https://shamsinsights.com/nutrition-analysis.html"><meta property="og:image" content="https://shamsinsights.com/learning/nutrition/results/water-calories.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="learning.css?v=journey2"><link rel="canonical" href="https://shamsinsights.com/nutrition-analysis.html"><link rel="alternate" hreflang="en" href="https://shamsinsights.com/nutrition-analysis.html"><link rel="alternate" hreflang="ar" href="https://shamsinsights.com/nutrition-analysis-ar.html"><link rel="stylesheet" href="bilingual.css?v=arabic3"><link rel="alternate" hreflang="x-default" href="https://shamsinsights.com/nutrition-analysis.html"><meta property="og:locale" content="en_GB"><meta property="og:locale:alternate" content="ar_SA"><link rel="stylesheet" href="brand.css?v=sun2">
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+<link rel="stylesheet" href="nutrition-analysis.css?v=food1"></head><body class="food-study"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html"><img class="brand-symbol" src="assets/brand/shams-insights-mark.svg" width="40" height="40" alt="" aria-hidden="true" decoding="async"><span class="brand-text"><span class="brand-name">Shams Insights</span><small>Shamseldeen Ismaiil</small></span></a><a class="language-switch" href="nutrition-analysis-ar.html" lang="ar" hreflang="ar" aria-label="Switch to Arabic — العربية" data-language-switch="" dir="rtl"><svg viewbox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><ellipse cx="12" cy="12" rx="4" ry="9"></ellipse><path d="M3 12h18"></path></svg><span>العربية</span></a><button class="menu-button" id="menuButton" aria-controls="navigation" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav id="navigation" aria-label="Main navigation"><a href="index.html#projects">Projects</a><a href="learning.html">Learning</a><a href="nutrition.html">Nutrition study</a><a class="nav-cta" href="assets/Shamseldeen_Ismaiil_Data_Analyst_CV.pdf">Download CV</a></nav></header><main id="main">
+<section class="learning-hero">
+      <a class="study-back" href="nutrition.html">← Back to the case study</a>
+      <p class="eyebrow">Python · Full analysis · Review September 2026</p>
+      <h1>The Food study.<br><em>Every step, in one place.</em></h1>
+      <p class="lead">Explore the data, inspect the results and open the Python code as you read. This page brings the reproducible 2026 review and the archived 2023 notebook into the portfolio.</p>
+      <span class="access-badge">Open to everyone · No sign-in</span>
+      <div class="learning-stats"><div><strong>7,793</strong><span>Food records</span></div><div><strong>25</strong><span>Food categories</span></div><div><strong>5,334</strong><span>Eligible modeling rows</span></div><div><strong>1,056</strong><span>Held-out test rows</span></div></div>
+      <nav class="study-contents" aria-label="Analysis chapters">
+      <a href="#data">01 Data</a><a href="#cleaning">02 Cleaning</a><a href="#exploration">03 Findings</a><a href="#models">04 Models</a><a href="#code">05 Python code</a><a href="#original-notebook">06 Original notebook</a></nav></section>
+<section class="learning-section" id="data"><div class="section-label">01 / The data</div><h2>One food per row. A common 100 g basis.</h2><p class="section-intro">The DataCamp competition dataset was adapted from USDA FoodData Central. Its 12 columns contain a food identifier, description, category and nine nutrient or energy fields. The names below are preserved from the source.</p>
+<div class="table-scroll"><table><caption>First five source rows · values per 100 g</caption><thead><tr><th scope="col">Food</th><th scope="col">Category</th><th scope="col">Energy (kcal)</th><th scope="col">Water (g)</th></tr></thead><tbody><tr><td>Pillsbury Golden Layer Buttermilk Biscuits, Artificial Flavor, refrigerated dough</td><td>Baked Products</td><td data-number="">307.0</td><td data-number="">35.5</td></tr><tr><td>Pillsbury, Cinnamon Rolls with Icing, refrigerated dough</td><td>Baked Products</td><td data-number="">330.0</td><td data-number="">27.9</td></tr><tr><td>Kraft Foods, Shake N Bake Original Recipe, Coating for Pork, dry</td><td>Baked Products</td><td data-number="">377.0</td><td data-number="">3.2</td></tr><tr><td>George Weston Bakeries, Thomas English Muffins</td><td>Baked Products</td><td data-number="">232.0</td><td data-number="">42.6</td></tr><tr><td>Waffles, buttermilk, frozen, ready-to-heat</td><td>Baked Products</td><td data-number="">273.0</td><td data-number="">40.3</td></tr></tbody></table></div>
+<details class="study-details"><summary>View all 25 category counts</summary><div class="study-details-body"><div class="table-scroll"><table><thead><tr><th scope="col">Category</th><th scope="col">Foods</th></tr></thead><tbody><tr><td>American Indian/Alaska Native Foods</td><td data-number="">165</td></tr><tr><td>Baby Foods</td><td data-number="">345</td></tr><tr><td>Baked Products</td><td data-number="">517</td></tr><tr><td>Beef Products</td><td data-number="">954</td></tr><tr><td>Beverages</td><td data-number="">366</td></tr><tr><td>Breakfast Cereals</td><td data-number="">195</td></tr><tr><td>Cereal Grains and Pasta</td><td data-number="">181</td></tr><tr><td>Dairy and Egg Products</td><td data-number="">291</td></tr><tr><td>Fast Foods</td><td data-number="">312</td></tr><tr><td>Fats and Oils</td><td data-number="">216</td></tr><tr><td>Finfish and Shellfish Products</td><td data-number="">264</td></tr><tr><td>Fruits and Fruit Juices</td><td data-number="">355</td></tr><tr><td>Lamb, Veal, and Game Products</td><td data-number="">464</td></tr><tr><td>Legumes and Legume Products</td><td data-number="">290</td></tr><tr><td>Meals, Entrees, and Side Dishes</td><td data-number="">81</td></tr><tr><td>Nut and Seed Products</td><td data-number="">137</td></tr><tr><td>Pork Products</td><td data-number="">336</td></tr><tr><td>Poultry Products</td><td data-number="">383</td></tr><tr><td>Restaurant Foods</td><td data-number="">109</td></tr><tr><td>Sausages and Luncheon Meats</td><td data-number="">167</td></tr><tr><td>Snacks</td><td data-number="">176</td></tr><tr><td>Soups, Sauces, and Gravies</td><td data-number="">254</td></tr><tr><td>Spices and Herbs</td><td data-number="">63</td></tr><tr><td>Sweets</td><td data-number="">358</td></tr><tr><td>Vegetables and Vegetable Products</td><td data-number="">814</td></tr></tbody></table></div></div></details>
+<div class="source-downloads"><a href="learning/nutrition/nutrition.csv" download>Download the dataset (CSV)</a><a href="learning/nutrition/results/category_counts.csv" download>Download category counts</a></div></section>
+<section class="learning-section" id="cleaning"><div class="section-label">02 / Preparation</div><h2>Convert the units. Preserve missingness.</h2><p class="section-intro">Numeric values are extracted from strings such as 5.88 g and 307.0 kcal. Missing entries remain missing. Each calculation then selects the inputs it actually needs, instead of dropping every row with any missing field.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Field</th><th scope="col">Missing rows</th><th scope="col">Share of all foods</th></tr></thead><tbody><tr><td>Alcohol</td><td data-number="">2,394</td><td data-number="">30.7%</td></tr><tr><td>Fiber</td><td data-number="">562</td><td data-number="">7.2%</td></tr><tr><td>Vitamin C</td><td data-number="">461</td><td data-number="">5.9%</td></tr><tr><td>Cholesterol</td><td data-number="">399</td><td data-number="">5.1%</td></tr></tbody></table></div>
+<p class="caption">Calories, protein, carbohydrate, fat and water have no missing values in this extract.</p>
+<details class="study-details"><summary>Open the actual cleaning code</summary><pre class="source-code" tabindex="0"><code>names={&#x27;Calories&#x27;:&#x27;calories&#x27;,&#x27;Protein&#x27;:&#x27;protein&#x27;,&#x27;Carbohydrate&#x27;:&#x27;carb&#x27;,&#x27;Total fat&#x27;:&#x27;fat&#x27;,&#x27;Cholesterol&#x27;:&#x27;cholesterol&#x27;,&#x27;Fiber&#x27;:&#x27;fiber&#x27;,&#x27;Water&#x27;:&#x27;water&#x27;,&#x27;Alcohol&#x27;:&#x27;alcohol&#x27;,&#x27;Vitamin C&#x27;:&#x27;vitamin_c&#x27;}
+data=raw[[&#x27;FDC_ID&#x27;,&#x27;Item&#x27;,&#x27;Category&#x27;]].copy()
+for src,dst in names.items():
+    data[dst]=pd.to_numeric(raw[src].astype(&#x27;string&#x27;).str.extract(r&#x27;^\s*([-+]?\d+(?:\.\d+)?)&#x27;,expand=False),errors=&#x27;coerce&#x27;)
+# Missing values stay missing; no unverified assumption that missing means zero.
+missing=data[list(names.values())].isna().sum().to_dict()</code></pre></details>
+</section>
+<section class="learning-section" id="exploration"><div class="section-label">03 / Exploration</div><h2>What the food records show.</h2><div class="study-feature"><div><h3>More water, lower energy density</h3><p>Across 7,793 foods, water and calories have Pearson r = −0.895. This describes a strong negative association within the dataset on a per-100-g basis.</p></div><figure class="study-figure"><img src="learning/nutrition/results/water-calories.png" width="1600" height="928" loading="lazy" alt="Scatter plot: higher water content is associated with lower calories; r minus 0.895"><figcaption>All records have water and calorie values. This is an association between food properties.</figcaption></figure></div>
+<h3>Which fruits contain the most vitamin C in this dataset?</h3><p class="section-intro">Raw acerola ranks highest among records in the Fruits and Fruit Juices category: 1,677.6 mg per 100 g. Fresh foods, juices and dried foods share the same mass basis but are different product forms.</p><figure class="study-figure"><img src="learning/nutrition/results/fruit-vitamin-c.svg" width="1000" height="490" loading="lazy" alt="Top five fruit records by vitamin C, led by raw acerola and acerola juice"><figcaption>*The abbreviated jujube label retains the source wording ‘fresh, dried’. Full source names and exact values appear below.</figcaption></figure>
+<div class="table-scroll"><table><thead><tr><th scope="col">Source food name</th><th scope="col">Vitamin C (mg / 100 g)</th></tr></thead><tbody><tr><td>Acerola, (west indian cherry), raw</td><td data-number="">1,677.6</td></tr><tr><td>Acerola juice, raw</td><td data-number="">1,600.0</td></tr><tr><td>Guavas, common, raw</td><td data-number="">228.3</td></tr><tr><td>Jujube, Chinese, fresh, dried</td><td data-number="">217.6</td></tr><tr><td>Litchis, dried</td><td data-number="">183.0</td></tr></tbody></table></div>
+<details class="study-details"><summary>Explore the original food-group question</summary><div class="study-details-body"><p>This revisits the original notebook’s food-group question. A food with zero recorded carbohydrate is not a complete diet. Means are unweighted across food records; missing cholesterol is excluded from its mean, with its denominator shown.</p><div class="table-scroll"><table><thead><tr><th scope="col">Food group</th><th scope="col">Rows</th><th scope="col">Mean kcal</th><th scope="col">Mean fat (g)</th><th scope="col">Mean cholesterol (mg)</th><th scope="col">Cholesterol values</th></tr></thead><tbody><tr><td>All foods</td><td data-number="">7,793</td><td data-number="">220.2</td><td data-number="">10.7</td><td data-number="">45.0</td><td data-number="">7,394</td></tr><tr><td>Zero-carbohydrate foods</td><td data-number="">2,138</td><td data-number="">233.6</td><td data-number="">15.6</td><td data-number="">95.7</td><td data-number="">2,087</td></tr><tr><td>500 highest-protein foods</td><td data-number="">500</td><td data-number="">242.7</td><td data-number="">9.7</td><td data-number="">99.6</td><td data-number="">493</td></tr></tbody></table></div><p class="caption">All means use a 100 g basis. These groups overlap and are descriptive selections; they cannot establish dietary benefits, harms or disease risk.</p><a class="text-link" href="learning/nutrition/results/food_group_comparison.csv" download>Download comparison CSV</a></div></details>
+</section>
+<section class="learning-section" id="models"><div class="section-label">04 / Model comparison</div><h2>Evaluate each model on the same foods.</h2><p class="section-intro">The original macronutrient model, fitted without an intercept, gives 4.137 kcal/g for protein, 8.844 for fat and 3.854 for carbohydrate when recalculated on all positive-calorie rows. The review below uses a separate, common evaluation sample.</p><ol class="study-methods"><li><strong>1. Same eligible rows</strong><p>5,334 foods with positive calories and complete protein, fat, carbohydrate, alcohol and fiber inputs.</p></li><li><strong>2. Fixed split</strong><p>Seed 42; approximately 20% within each category for testing: 4,278 training and 1,056 test rows.</p></li><li><strong>3. Compare held-out errors</strong><p>Fit on training rows only, then calculate MAE and RMSE on the same test rows for all three specifications.</p></li></ol>
+<figure class="study-figure"><img src="learning/nutrition/results/model-errors.svg" width="1000" height="490" loading="lazy" alt="Test RMSE: baseline 15.38, category interactions 15.71, alcohol and fiber 13.55 kcal per 100 g"><figcaption>Category interactions alone slightly worsen RMSE. Alcohol and fiber interactions reduce it on this split.</figcaption></figure>
+<div class="table-scroll"><table><thead><tr><th scope="col">Specification</th><th scope="col">MAE (kcal)</th><th scope="col">RMSE (kcal)</th><th scope="col">Rank / columns</th></tr></thead><tbody><tr><td>Macronutrients</td><td data-number="">6.86</td><td data-number="">15.38</td><td data-number="">3 / 3</td></tr><tr><td>Category interactions</td><td data-number="">6.04</td><td data-number="">15.71</td><td data-number="">100 / 100</td></tr><tr><td>Alcohol and fiber interactions</td><td data-number="">4.70</td><td data-number="">13.55</td><td data-number="">126 / 150</td></tr></tbody></table></div>
+<p class="caption">MAE is mean absolute error; RMSE is root mean squared error. Both are in kcal per 100 g. Results come from the September 2026 review, not the original submission.</p><div class="study-note"><strong>How far the result goes</strong><p>The final design matrix has rank 126 for 150 columns, so individual coefficients are not uniquely identifiable. Related foods may occur in both splits, and complete-case selection can introduce bias. This is an internal exploratory comparison, not validation on a new population or a clinical prediction tool.</p></div><a class="text-link" href="learning/nutrition/results/model_comparison.csv" download>Download exact model results (CSV)</a></section>
+<section class="learning-section" id="code"><div class="section-label">05 / Reproducible Python</div><h2>Read the code behind the results.</h2><p class="section-intro">The complete review script is available below. It uses pandas for preparation, NumPy least squares for the model specifications and Matplotlib for the scatter plot. Code stays in English in both editions.</p>
+<details class="study-details"><summary>Open the complete review script</summary><pre class="source-code" tabindex="0"><code>&quot;&quot;&quot;Reproducible 2026 review of Shamseldeen&#x27;s 2023 DataCamp nutrition study.
+
+Run: python reviewed_analysis.py --data nutrition.csv --output results
+The original study used statsmodels. This companion uses NumPy least squares
+to make the specifications and common evaluation sample explicit.
+&quot;&quot;&quot;
+import argparse,json
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import matplotlib
+matplotlib.use(&#x27;Agg&#x27;)
+import matplotlib.pyplot as plt
+
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument(&#x27;--data&#x27;,default=&#x27;nutrition.csv&#x27;)
+    parser.add_argument(&#x27;--output&#x27;,default=&#x27;results&#x27;)
+    args=parser.parse_args()
+    out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
+    raw=pd.read_csv(args.data)
+    names={&#x27;Calories&#x27;:&#x27;calories&#x27;,&#x27;Protein&#x27;:&#x27;protein&#x27;,&#x27;Carbohydrate&#x27;:&#x27;carb&#x27;,&#x27;Total fat&#x27;:&#x27;fat&#x27;,&#x27;Cholesterol&#x27;:&#x27;cholesterol&#x27;,&#x27;Fiber&#x27;:&#x27;fiber&#x27;,&#x27;Water&#x27;:&#x27;water&#x27;,&#x27;Alcohol&#x27;:&#x27;alcohol&#x27;,&#x27;Vitamin C&#x27;:&#x27;vitamin_c&#x27;}
+    data=raw[[&#x27;FDC_ID&#x27;,&#x27;Item&#x27;,&#x27;Category&#x27;]].copy()
+    for src,dst in names.items():
+        data[dst]=pd.to_numeric(raw[src].astype(&#x27;string&#x27;).str.extract(r&#x27;^\s*([-+]?\d+(?:\.\d+)?)&#x27;,expand=False),errors=&#x27;coerce&#x27;)
+    # Missing values stay missing; no unverified assumption that missing means zero.
+    missing=data[list(names.values())].isna().sum().to_dict()
+    sample=data.dropna(subset=[&#x27;calories&#x27;,&#x27;protein&#x27;,&#x27;fat&#x27;,&#x27;carb&#x27;,&#x27;alcohol&#x27;,&#x27;fiber&#x27;]).copy()
+    sample=sample.loc[sample.calories&gt;0].reset_index(drop=True)
+    # Same rows and deterministic split across all models, stratified by food category.
+    rng=np.random.default_rng(42);test_idx=[]
+    for _,group in sample.groupby(&#x27;Category&#x27;,sort=True):
+        ids=group.index.to_numpy();rng.shuffle(ids)
+        if len(ids)&gt;=5:test_idx.extend(ids[:max(1,int(len(ids)*.2))])
+    test=np.zeros(len(sample),dtype=bool);test[test_idx]=True;train=~test
+    categories=pd.get_dummies(sample.Category,dtype=float).to_numpy()
+    def matrix(cols,interactions):
+        x=sample[cols].to_numpy(dtype=float)
+        return np.column_stack([categories]+[categories*x[:,j,None] for j in range(x.shape[1])]) if interactions else x
+    specs=[(&#x27;Macronutrients&#x27;,[&#x27;protein&#x27;,&#x27;fat&#x27;,&#x27;carb&#x27;],False),(&#x27;Category interactions&#x27;,[&#x27;protein&#x27;,&#x27;fat&#x27;,&#x27;carb&#x27;],True),(&#x27;Alcohol and fiber interactions&#x27;,[&#x27;protein&#x27;,&#x27;fat&#x27;,&#x27;carb&#x27;,&#x27;alcohol&#x27;,&#x27;fiber&#x27;],True)]
+    metrics=[];y=sample.calories.to_numpy(dtype=float)
+    for label,cols,interactions in specs:
+        x=matrix(cols,interactions);beta,_,rank,_=np.linalg.lstsq(x[train],y[train],rcond=None)
+        pred=x@beta
+        err=pred[test]-y[test]
+        metrics.append({&#x27;model&#x27;:label,&#x27;train_rows&#x27;:int(train.sum()),&#x27;test_rows&#x27;:int(test.sum()),&#x27;parameters&#x27;:x.shape[1],&#x27;rank&#x27;:int(rank),&#x27;test_mae_kcal&#x27;:float(np.abs(err).mean()),&#x27;test_rmse_kcal&#x27;:float(np.sqrt(np.mean(err**2))),&#x27;test_r2&#x27;:float(1-np.sum(err**2)/np.sum((y[test]-y[test].mean())**2))})
+    # Reproduce the saved original baseline using all positive-calorie records.
+    baseline=data.loc[data.calories&gt;0].dropna(subset=[&#x27;protein&#x27;,&#x27;fat&#x27;,&#x27;carb&#x27;])
+    coeff=np.linalg.lstsq(baseline[[&#x27;protein&#x27;,&#x27;fat&#x27;,&#x27;carb&#x27;]].to_numpy(dtype=float),baseline.calories.to_numpy(dtype=float),rcond=None)[0]
+    correlation=float(data[[&#x27;water&#x27;,&#x27;calories&#x27;]].corr().iloc[0,1])
+    fruits=data[data.Category==&#x27;Fruits and Fruit Juices&#x27;].dropna(subset=[&#x27;vitamin_c&#x27;]).nlargest(5,&#x27;vitamin_c&#x27;)
+    result={&#x27;reviewDate&#x27;:&#x27;2026-09-23&#x27;,&#x27;originalPublicationDate&#x27;:&#x27;2023-12-11&#x27;,&#x27;rows&#x27;:len(raw),&#x27;categories&#x27;:int(raw.Category.nunique()),&#x27;completeAllOriginalColumns&#x27;:int(raw.dropna().shape[0]),&#x27;missing&#x27;:{k:int(v) for k,v in missing.items()},&#x27;modelSampleRows&#x27;:len(sample),&#x27;waterCaloriesPearsonR&#x27;:correlation,&#x27;baselineCoefficients&#x27;:dict(zip([&#x27;protein&#x27;,&#x27;fat&#x27;,&#x27;carb&#x27;],map(float,coeff))),&#x27;topFruitVitaminC&#x27;:fruits[[&#x27;Item&#x27;,&#x27;vitamin_c&#x27;]].to_dict(&#x27;records&#x27;),&#x27;models&#x27;:metrics,&#x27;limitations&#x27;:[&#x27;A random row split is an internal check, not validation on a new population. Similar products can occur across the split.&#x27;,&#x27;Complete-case sampling can be biased; missing alcohol values are common.&#x27;,&#x27;Category-interaction models can be rank deficient; least squares provides one minimum-norm solution.&#x27;,&#x27;Energy is closely related to nutrient quantities by construction. High R-squared is not clinical evidence.&#x27;,&#x27;This descriptive food-composition study cannot infer health outcomes or recommend diets.&#x27;]}
+    (out/&#x27;metrics.json&#x27;).write_text(json.dumps(result,indent=2))
+    pd.DataFrame(metrics).to_csv(out/&#x27;model_comparison.csv&#x27;,index=False)
+    plt.rcParams.update({&#x27;font.family&#x27;:&#x27;DejaVu Sans&#x27;,&#x27;axes.spines.top&#x27;:False,&#x27;axes.spines.right&#x27;:False,&#x27;axes.labelcolor&#x27;:&#x27;#10231e&#x27;,&#x27;text.color&#x27;:&#x27;#10231e&#x27;})
+    fig,ax=plt.subplots(figsize=(10,5.8),layout=&#x27;constrained&#x27;);fig.patch.set_facecolor(&#x27;#f6f3eb&#x27;);ax.set_facecolor(&#x27;#f6f3eb&#x27;)
+    ax.scatter(data.water,data.calories,s=7,alpha=.18,color=&#x27;#176b52&#x27;,edgecolors=&#x27;none&#x27;,rasterized=True)
+    ax.set(xlabel=&#x27;Water (g per 100 g food)&#x27;,ylabel=&#x27;Energy (kcal per 100 g food)&#x27;,title=&#x27;Water content and energy density&#x27;)
+    ax.text(.98,.96,f&#x27;7,793 food records · r = {correlation:.2f}&#x27;,ha=&#x27;right&#x27;,va=&#x27;top&#x27;,transform=ax.transAxes)
+    fig.savefig(out/&#x27;water-calories.png&#x27;,dpi=160);plt.close(fig)
+    print(json.dumps(result,indent=2))
+
+if __name__==&#x27;__main__&#x27;:main()
+</code></pre></details>
+<details class="study-details"><summary>Run the analysis locally</summary><div class="study-details-body"><p>Clone the repository and run these commands from learning/nutrition. The last command rebuilds the web tables, additional charts and both full-analysis pages.</p><pre tabindex="0"><code>python -m pip install -r requirements.txt
+python reviewed_analysis.py --data nutrition.csv --output results
+python build_web_analysis.py</code></pre></div></details>
+<div class="source-downloads"><a href="learning/nutrition/reviewed_analysis.py" download>Review script (.py)</a><a href="learning/nutrition/build_web_analysis.py" download>Web tables and chart code (.py)</a><a href="learning/nutrition/requirements.txt" download>Python requirements</a><a href="https://github.com/shamseldeen/Shamseldeen.github.io/tree/main/learning/nutrition" target="_blank" rel="noopener">GitHub ↗</a></div></section>
+<section class="learning-section" id="original-notebook"><div class="section-label">06 / The original work</div><h2>Read the archived 2023 notebook.</h2><p class="section-intro">All 99 cells in the public archive are preserved below, in their original English. This archive retains the historical code, removes stored outputs and revises one unsupported health-outcome statement. It has not been rerun; the results above belong to the separate 2026 review.</p><p class="caption">The original zero-filling, in-sample comparisons and hypothetical prediction grids are historical learning steps. The reviewed approach and its limits are explained above.</p>
+<details class="study-details"><summary>Read all 99 archived cells · English</summary><div class="study-details-body"><div class="archive-cell" data-cell="1"><span class="archive-cell-label" dir="ltr">Cell 01 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>Archived 2023 nutrition analysis</h4>
+Author: Shamseldeen Ismaiil. Original publication: 11 December 2023.
+
+Portfolio archive prepared 23 September 2026. Original code is preserved; stored outputs are removed for portability and one unsupported health-outcome statement is replaced by a descriptive limitation. This historical notebook has not been rerun.
+
+Known issues include missing-value zero imputation, a mismatch between the described and actual final modeling frame, in-sample model comparison, and extrapolation to impossible nutrient combinations. Read README.md and use reviewed_analysis.py for the reproducible 2026 review.</div></div><div class="archive-cell" data-cell="2"><span class="archive-cell-label" dir="ltr">Cell 02 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>What is good food?</h4>
+
+<h4>📖 Background</h4>
+You and your friend have gotten into a debate about nutrition. Your friend follows a high-protein diet and does not eat any carbohydrates (no grains, no fruits). You claim that a balanced diet should contain all nutrients but should be low in calories. Both of you quickly realize that most of what you know about nutrition comes from mainstream and social media.
+
+Being the data scientist that you are, you offer to look at the data yourself to answer a few key questions.</div></div><div class="archive-cell" data-cell="3"><span class="archive-cell-label" dir="ltr">Cell 03 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>💾 The data</h4>
+
+You source nutrition data from USDA&#x27;s FoodData Central <a href="https://fdc.nal.usda.gov/download-datasets.html" target="_blank" rel="noopener">website</a>. This data contains the calorie content of 7,793 common foods, as well as their nutritional composition. Each row represents one food item, and nutritional values are based on a 100g serving. Here is a description of the columns:
+
+- <strong>FDC_ID</strong>: A unique identifier for each food item in the database.
+- <strong>Item</strong>: The name or description of the food product.
+- <strong>Category</strong>: The category or classification of the food item, such as &quot;Baked Products&quot; or &quot;Vegetables and Vegetable Products&quot;.
+- <strong>Calories</strong>: The energy content of the food, presented in kilocalories (kcal).
+- <strong>Protein</strong>: The protein content of the food, measured in grams.
+- <strong>Carbohydrate</strong>: The carbohydrate content of the food, measured in grams.
+- <strong>Total fat</strong>: The total fat content of the food, measured in grams.
+- <strong>Cholesterol</strong>: The cholesterol content of the food, measured in milligrams.
+- <strong>Fiber</strong>: The dietary fiber content of the food, measured in grams.
+- <strong>Water</strong>: The water content of the food, measured in grams.
+- <strong>Alcohol</strong>: The alcohol content of the food (if any), measured in grams.
+- <strong>Vitamin C</strong>: The Vitamin C content of the food, measured in milligrams.</div></div><div class="archive-cell" data-cell="4"><details class="study-details"><summary>Cell 04 / 99 · code</summary><pre class="source-code" tabindex="0"><code>import pandas as pd
+df_food = pd.read_csv(&#x27;nutrition.csv&#x27;)
+</code></pre></details></div><div class="archive-cell" data-cell="5"><span class="archive-cell-label" dir="ltr">Cell 05 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>summary:</h4>
+
+Create a report that covers the following:
+
+1. fruit has the highest vitamin C and  some other sources of vitamin C.
+2. the relationship between the calories and water content 
+3. possible drawbacks of a zero-carb diet drawbacks of a very high-protein diet.
+4. fit a linear model to find that kcal in protein, carbohydrates and fat.
+5. Alcohol as a source of calories.</div></div><div class="archive-cell" data-cell="6"><span class="archive-cell-label" dir="ltr">Cell 06 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">🥇First of all we need to explore our data and see information about dataframe.
+Information of Food data and columns types.</div></div><div class="archive-cell" data-cell="7"><details class="study-details"><summary>Cell 07 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_food.info()</code></pre></details></div><div class="archive-cell" data-cell="8"><span class="archive-cell-label" dir="ltr">Cell 08 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Delete all missing Data.
+New Data information.</div></div><div class="archive-cell" data-cell="9"><details class="study-details"><summary>Cell 09 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_food_Nna = df_food.dropna()
+df_food_Nna.info()</code></pre></details></div><div class="archive-cell" data-cell="10"><span class="archive-cell-label" dir="ltr">Cell 10 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">All columns are object but we need to convert all columns with data of object types and all data in it to numbers,so we can process this data.</div></div><div class="archive-cell" data-cell="11"><details class="study-details"><summary>Cell 11 / 99 · code</summary><pre class="source-code" tabindex="0"><code>import numpy as np
+df_food[[&#x27;Vitamin C&#x27;,&#x27;Cholesterol&#x27;]] = df_food[[&#x27;Vitamin C&#x27;,&#x27;Cholesterol&#x27;]].fillna(&#x27;0.0 mg&#x27;)
+df_food[[&#x27;Fiber&#x27;,&#x27;Alcohol&#x27;]]= df_food[[&#x27;Fiber&#x27;,&#x27;Alcohol&#x27;]].fillna(&#x27;0.0 g&#x27;)
+
+</code></pre></details></div><div class="archive-cell" data-cell="12"><span class="archive-cell-label" dir="ltr">Cell 12 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">We need all data, so we replace missing data with 0, as start to begin aur journey.🌋</div></div><div class="archive-cell" data-cell="13"><details class="study-details"><summary>Cell 13 / 99 · code</summary><pre class="source-code" tabindex="0"><code>def DataframeAddCol(df, dic):
+    &quot;&quot;&quot;
+    Function to convert string columns with &#x27;mg, g, kca, ...&#x27; to float and add new columns to the dataframe.
+    df: DataFrame, dic: dictionary of column names and measurements like mg, g, ...
+    &quot;&quot;&quot;
+    for i, x in dic.items():
+        new_col_name = i + &quot;_&quot; + x
+        df[new_col_name] = pd.to_numeric(df[i].str.split(x).str[0], errors=&#x27;coerce&#x27;)
+    return df</code></pre></details></div><div class="archive-cell" data-cell="14"><span class="archive-cell-label" dir="ltr">Cell 14 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Our first step convert all columns with data from objects to numbers.🪜</div></div><div class="archive-cell" data-cell="15"><details class="study-details"><summary>Cell 15 / 99 · code</summary><pre class="source-code" tabindex="0"><code>dictcol = {&quot;Calories&quot;:&quot;kcal&quot;,
+          &quot;Protein&quot;:&quot;g&quot;,
+          &quot;Carbohydrate&quot;:&quot;g&quot;,
+          &quot;Total fat&quot;:&quot;g&quot;,
+          &quot;Cholesterol&quot;:&quot;mg&quot;,
+          &quot;Fiber&quot;:&quot;g&quot;,
+          &quot;Water&quot;:&quot;g&quot;,
+          &quot;Alcohol&quot;:&quot;g&quot;,
+          &quot;Vitamin C&quot;:&quot;mg&quot;}
+DataframeAddCol(df_food,dictcol)
+</code></pre></details></div><div class="archive-cell" data-cell="16"><span class="archive-cell-label" dir="ltr">Cell 16 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Now📝, we have our new dataframe with numerical columns from originals.</div></div><div class="archive-cell" data-cell="17"><details class="study-details"><summary>Cell 17 / 99 · code</summary><pre class="source-code" tabindex="0"><code>print(df_food.info())</code></pre></details></div><div class="archive-cell" data-cell="18"><span class="archive-cell-label" dir="ltr">Cell 18 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">New Dataframe with new numerical columns.</div></div><div class="archive-cell" data-cell="19"><details class="study-details"><summary>Cell 19 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+df_food_No = df_food[[&#x27;FDC_ID&#x27;,&#x27;Item&#x27;,&#x27;Category&#x27;,&#x27;Calories_kcal&#x27;,
+              &#x27;Protein_g&#x27;,
+              &#x27;Carbohydrate_g&#x27;,
+              &#x27;Total fat_g&#x27;,
+              &#x27;Cholesterol_mg&#x27;,
+              &#x27;Fiber_g&#x27;,
+              &#x27;Water_g&#x27;,
+              &#x27;Alcohol_g&#x27;,
+              &#x27;Vitamin C_mg&#x27;]]
+
+
+df_food_No.info()
+               
+</code></pre></details></div><div class="archive-cell" data-cell="20"><span class="archive-cell-label" dir="ltr">Cell 20 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">what is the highest vitamin C food and it&#x27;s other properties?⁉️</div></div><div class="archive-cell" data-cell="21"><details class="study-details"><summary>Cell 21 / 99 · code</summary><pre class="source-code" tabindex="0"><code>highCfood = df_food_No[df_food[&#x27;Vitamin C_mg&#x27;] == df_food[&#x27;Vitamin C_mg&#x27;].max()]
+
+</code></pre></details></div><div class="archive-cell" data-cell="22"><details class="study-details"><summary>Cell 22 / 99 · code</summary><pre class="source-code" tabindex="0"><code>highCfood</code></pre></details></div><div class="archive-cell" data-cell="23"><span class="archive-cell-label" dir="ltr">Cell 23 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Which fruit has the highest vitamin C content? 
+🥗🥝🍊🍏🍓🍊
+What are some other sources of vitamin C?
+🍉🍈🍇🍅🍄🌭🌮🌯🌽🌾
+</div></div><div class="archive-cell" data-cell="24"><details class="study-details"><summary>Cell 24 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_foodFruit = df_food[df_food[&#x27;Category&#x27;].isin([&#x27;Fruits and Fruit Juices&#x27;])]
+df_foodFruit_HvitC = df_foodFruit[df_foodFruit[&#x27;Vitamin C_mg&#x27;] == df_foodFruit[&#x27;Vitamin C_mg&#x27;].max()]
+itemFruitHC = list(df_foodFruit_HvitC[&#x27;Item&#x27;])
+ConcVitC = df_foodFruit_HvitC[&#x27;Vitamin C_mg&#x27;]
+
+print(f&quot;Now,the fruit has the heighest vitamin C content,This fruit is named &#x27;{itemFruitHC[0].split(&#x27;,&#x27;)[0]}&#x27; and it has a concentration of vitamin C equal {int(ConcVitC)} mg.&quot;)
+</code></pre></details></div><div class="archive-cell" data-cell="25"><details class="study-details"><summary>Cell 25 / 99 · code</summary><pre class="source-code" tabindex="0"><code>import seaborn as sns
+import matplotlib.pyplot as plt
+df_food_No[&#x27;Vitamin_C_mg&#x27;] = df_food_No[&#x27;Vitamin C_mg&#x27;]
+ConcVitC = float(ConcVitC)
+
+df_food_No[&#x27;point_type&#x27;] = [&#x27;Highest vitC Fruit &quot;Acerola&quot;&#x27; if VitC == ConcVitC else &#x27;Others&#x27; for VitC in df_food_No.Vitamin_C_mg]
+sns.scatterplot(x = &#x27;Vitamin_C_mg&#x27;,
+                y = &#x27;Water_g&#x27;,
+                hue = &#x27;point_type&#x27;,
+                data = df_food_No)
+plt.show()
+</code></pre></details></div><div class="archive-cell" data-cell="26"><span class="archive-cell-label" dir="ltr">Cell 26 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Other food with high concentration of Vitamin C.</div></div><div class="archive-cell" data-cell="27"><details class="study-details"><summary>Cell 27 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+def highconc(column1,colNam=&#x27;Vitamin C_mg&#x27;,df0=df_food):
+    &quot;&quot;&quot;
+    column1 is category of item
+    column2 is numeric to take max
+    take the max vitamin c in each item in column 
+    return all dataframe columns
+    but only unique item of selected column
+    &quot;&quot;&quot;
+    listcolumn1 = list(column1.unique())
+    df = pd.DataFrame()
+    for i in listcolumn1:
+        df1 = df0[column1.isin([i])]
+        
+        df2 = df1[df1[colNam] == df1[colNam].max()]
+        df = pd.concat([df2, df], ignore_index=True)
+        
+    return df </code></pre></details></div><div class="archive-cell" data-cell="28"><details class="study-details"><summary>Cell 28 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+dfhighC = highconc(df_food_No[&#x27;Category&#x27;],df0=df_food_No)
+</code></pre></details></div><div class="archive-cell" data-cell="29"><details class="study-details"><summary>Cell 29 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+dfhighC.drop(index=18,axis=0,inplace=True)
+</code></pre></details></div><div class="archive-cell" data-cell="30"><span class="archive-cell-label" dir="ltr">Cell 30 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">The heighest vitamin C foods Dataframe in food Database.</div></div><div class="archive-cell" data-cell="31"><details class="study-details"><summary>Cell 31 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+dfhighC[[&#x27;Item&#x27;,&#x27;Category&#x27;,&#x27;Vitamin_C_mg&#x27;]].sort_values(&#x27;Vitamin_C_mg&#x27;, ascending=False)
+</code></pre></details></div><div class="archive-cell" data-cell="32"><details class="study-details"><summary>Cell 32 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_foodVeg = df_food[df_food[&#x27;Category&#x27;].isin([&#x27;Vegetables and Vegetable Products&#x27;])]</code></pre></details></div><div class="archive-cell" data-cell="33"><details class="study-details"><summary>Cell 33 / 99 · code</summary><pre class="source-code" tabindex="0"><code>Top10Fruit = df_foodFruit.sort_values(&#x27;Vitamin C_mg&#x27;, ascending= False).head(10)
+Top10Veg = df_foodVeg.sort_values(&#x27;Vitamin C_mg&#x27;, ascending= False).head(10)
+Top10dfFood = df_food.sort_values(&#x27;Vitamin C_mg&#x27;, ascending=False).head(10)
+
+Alternative10 = dfhighC.sort_values(&#x27;Vitamin C_mg&#x27;,ascending=False).head(10)
+
+ 
+
+</code></pre></details></div><div class="archive-cell" data-cell="34"><span class="archive-cell-label" dir="ltr">Cell 34 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Top ten of high concentration of foods in unique Categories.</div></div><div class="archive-cell" data-cell="35"><details class="study-details"><summary>Cell 35 / 99 · code</summary><pre class="source-code" tabindex="0"><code>Alternative10[[&#x27;Item&#x27;,&#x27;Category&#x27;,&#x27;Vitamin C_mg&#x27;]].reset_index(drop=True)</code></pre></details></div><div class="archive-cell" data-cell="36"><span class="archive-cell-label" dir="ltr">Cell 36 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Top high concentrations of all data notice duplicates.😁</div></div><div class="archive-cell" data-cell="37"><details class="study-details"><summary>Cell 37 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+Top10dfFood[[&#x27;Item&#x27;,&#x27;Vitamin C_mg&#x27;]].reset_index(drop=True)</code></pre></details></div><div class="archive-cell" data-cell="38"><span class="archive-cell-label" dir="ltr">Cell 38 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">top vegetables with high concentration of vitamin c.</div></div><div class="archive-cell" data-cell="39"><details class="study-details"><summary>Cell 39 / 99 · code</summary><pre class="source-code" tabindex="0"><code>Top10Veg[[&#x27;Item&#x27;,&#x27;Vitamin C_mg&#x27;]].reset_index(drop=True)</code></pre></details></div><div class="archive-cell" data-cell="40"><span class="archive-cell-label" dir="ltr">Cell 40 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">top 10 fruit with high concentration of vitamin c.</div></div><div class="archive-cell" data-cell="41"><details class="study-details"><summary>Cell 41 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+Top10Fruit[[&#x27;Item&#x27;,&#x27;Vitamin C_mg&#x27;]].reset_index(drop=True)</code></pre></details></div><div class="archive-cell" data-cell="42"><span class="archive-cell-label" dir="ltr">Cell 42 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Negative relationship between the calories and water content of a food item.</div></div><div class="archive-cell" data-cell="43"><details class="study-details"><summary>Cell 43 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+sns.regplot(y=&#x27;Calories_kcal&#x27;,
+            x=&#x27;Water_g&#x27;,
+            data=df_food,
+            ci=None)
+
+plt.show()</code></pre></details></div><div class="archive-cell" data-cell="44"><span class="archive-cell-label" dir="ltr">Cell 44 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>What are the possible drawbacks of a zero-carb diet? </h4></div></div><div class="archive-cell" data-cell="45"><details class="study-details"><summary>Cell 45 / 99 · code</summary><pre class="source-code" tabindex="0"><code>ZeroCarb = df_food_No[df_food_No[&#x27;Carbohydrate_g&#x27; ]== 0.0]
+ZeroCarb.info()</code></pre></details></div><div class="archive-cell" data-cell="46"><details class="study-details"><summary>Cell 46 / 99 · code</summary><pre class="source-code" tabindex="0"><code>ZeroCarb[[&#x27;Calories_kcal&#x27;,&#x27;Total fat_g&#x27;, &#x27;Cholesterol_mg&#x27;]].mean()</code></pre></details></div><div class="archive-cell" data-cell="47"><details class="study-details"><summary>Cell 47 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_food_No[[&#x27;Calories_kcal&#x27;,&#x27;Total fat_g&#x27;, &#x27;Cholesterol_mg&#x27;]].mean()</code></pre></details></div><div class="archive-cell" data-cell="48"><span class="archive-cell-label" dir="ltr">Cell 48 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>What could be the drawbacks of a very high-protein diet?</h4></div></div><div class="archive-cell" data-cell="49"><details class="study-details"><summary>Cell 49 / 99 · code</summary><pre class="source-code" tabindex="0"><code>Top_500_high_protein = df_food_No.sort_values(&#x27;Protein_g&#x27;,ascending=False).head(500)
+Top_500_high_protein.sort_values(&#x27;Cholesterol_mg&#x27;,ascending=False)</code></pre></details></div><div class="archive-cell" data-cell="50"><details class="study-details"><summary>Cell 50 / 99 · code</summary><pre class="source-code" tabindex="0"><code>Top_500_high_protein[[&#x27;Calories_kcal&#x27;,&#x27;Total fat_g&#x27;, &#x27;Cholesterol_mg&#x27;]].mean()</code></pre></details></div><div class="archive-cell" data-cell="51"><span class="archive-cell-label" dir="ltr">Cell 51 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>Descriptive cholesterol comparison</h4>
+These selected food groups have different cholesterol levels in this dataset. This comparison cannot establish disease risk or clinical diet effects.</div></div><div class="archive-cell" data-cell="52"><span class="archive-cell-label" dir="ltr">Cell 52 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>According to the Cleveland Clinic website, a gram of fat has around 9 kilocalories, and a gram of protein and a gram of carbohydrate contain 4 kilocalories each. Fit a linear model to test whether these estimates agree with the data.</h4></div></div><div class="archive-cell" data-cell="53"><details class="study-details"><summary>Cell 53 / 99 · code</summary><pre class="source-code" tabindex="0"><code>NoZeroCal = df_food_No[df_food_No[&#x27;Calories_kcal&#x27;] != 0.0]
+NoZeroCal[&#x27;Fat_g&#x27;] = NoZeroCal[&#x27;Total fat_g&#x27;]</code></pre></details></div><div class="archive-cell" data-cell="54"><details class="study-details"><summary>Cell 54 / 99 · code</summary><pre class="source-code" tabindex="0"><code>NoZeroCal.info()</code></pre></details></div><div class="archive-cell" data-cell="55"><span class="archive-cell-label" dir="ltr">Cell 55 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr">Now,time to the model.
+Fit a linear model to test whether these estimates agree with the data.</div></div><div class="archive-cell" data-cell="56"><details class="study-details"><summary>Cell 56 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+from statsmodels.formula.api import ols
+# Fit the model
+mdl_calories_vs_P_F_C = ols(&#x27;Calories_kcal ~ Protein_g + Fat_g + Carbohydrate_g + 0&#x27;, data=NoZeroCal).fit()
+
+# Create the explanatory data
+explanatory_dataPFC = pd.DataFrame({&#x27;Protein_g&#x27;: [1, 0, 0,0,10,5.88,200],
+                                   &#x27;Fat_g&#x27;: [0, 1, 0,0,20,13.24,100],
+                                   &#x27;Carbohydrate_g&#x27;: [0, 0, 1,0,15,41.18,100]})
+# Predict &#x27;Calories_kcal&#x27;
+prediction_data = explanatory_dataPFC.assign(Calories_kcal=mdl_calories_vs_P_F_C.predict(explanatory_dataPFC))
+
+# Calculate MSE and RSE
+mse = mdl_calories_vs_P_F_C.mse_resid
+rse = np.sqrt(mse)</code></pre></details></div><div class="archive-cell" data-cell="57"><details class="study-details"><summary>Cell 57 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_food_No.iloc[0][3:7]</code></pre></details></div><div class="archive-cell" data-cell="58"><details class="study-details"><summary>Cell 58 / 99 · code</summary><pre class="source-code" tabindex="0"><code>print(mdl_calories_vs_P_F_C.params)</code></pre></details></div><div class="archive-cell" data-cell="59"><details class="study-details"><summary>Cell 59 / 99 · code</summary><pre class="source-code" tabindex="0"><code>explanatory_dataPFC</code></pre></details></div><div class="archive-cell" data-cell="60"><details class="study-details"><summary>Cell 60 / 99 · code</summary><pre class="source-code" tabindex="0"><code>print(mdl_calories_vs_P_F_C.rsquared)
+print(mdl_calories_vs_P_F_C.rsquared_adj)</code></pre></details></div><div class="archive-cell" data-cell="61"><span class="archive-cell-label" dir="ltr">Cell 61 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>Analyze the errors of your linear model to see what could be the hidden sources of calories in food.</h4></div></div><div class="archive-cell" data-cell="62"><details class="study-details"><summary>Cell 62 / 99 · code</summary><pre class="source-code" tabindex="0"><code>print(&#x27;MSE :&#x27;, mse)
+print(&#x27;RSE :&#x27;, rse)</code></pre></details></div><div class="archive-cell" data-cell="63"><details class="study-details"><summary>Cell 63 / 99 · code</summary><pre class="source-code" tabindex="0"><code>prediction_data</code></pre></details></div><div class="archive-cell" data-cell="64"><details class="study-details"><summary>Cell 64 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+plt.figure()
+sns.regplot(y=&#x27;Calories_kcal&#x27;,
+            x=&#x27;Protein_g&#x27;,
+            data=NoZeroCal,
+            ci=None,
+            scatter_kws={&#x27;alpha&#x27;: 0.5},
+            color=sns.color_palette(&quot;deep&quot;)[0],
+            label=&#x27;Protein&#x27;)
+sns.regplot(y=&#x27;Calories_kcal&#x27;,
+            x=&#x27;Fat_g&#x27;,
+            data=NoZeroCal,
+            ci=None,
+            scatter_kws={&#x27;alpha&#x27;: 0.5},
+            color=sns.color_palette(&quot;deep&quot;)[1],
+            label=&#x27;Fat&#x27;)
+sns.regplot(y=&#x27;Calories_kcal&#x27;,
+            x=&#x27;Carbohydrate_g&#x27;,
+            data=NoZeroCal,
+            ci=None,
+            scatter_kws={&#x27;alpha&#x27;: 0.5},
+            color=sns.color_palette(&quot;deep&quot;)[2],
+            label=&#x27;Carbohydrate&#x27;)
+
+plt.xlabel(&#x27;Grams&#x27;)
+plt.ylabel(&#x27;Calories (kcal)&#x27;)
+plt.legend()
+plt.show()</code></pre></details></div><div class="archive-cell" data-cell="65"><details class="study-details"><summary>Cell 65 / 99 · code</summary><pre class="source-code" tabindex="0"><code>NoZeroCal</code></pre></details></div><div class="archive-cell" data-cell="66"><details class="study-details"><summary>Cell 66 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+from statsmodels.formula.api import ols
+# Fit the model
+mdl_calories_vs_P_F_C_cat = ols(&#x27;Calories_kcal ~ Protein_g + Fat_g + Carbohydrate_g + Category + Category : Protein_g + Category:Fat_g + Category : Carbohydrate_g + 0&#x27;, data=NoZeroCal).fit()</code></pre></details></div><div class="archive-cell" data-cell="67"><details class="study-details"><summary>Cell 67 / 99 · code</summary><pre class="source-code" tabindex="0"><code>from itertools import product </code></pre></details></div><div class="archive-cell" data-cell="68"><details class="study-details"><summary>Cell 68 / 99 · code</summary><pre class="source-code" tabindex="0"><code>catList = list(NoZeroCal[&#x27;Category&#x27;].unique())
+proteinList = np.arange(0,50,10)
+fatList = np.arange(0,50,10)
+carbohydrateList = np.arange(0,50,10)
+</code></pre></details></div><div class="archive-cell" data-cell="69"><details class="study-details"><summary>Cell 69 / 99 · code</summary><pre class="source-code" tabindex="0"><code>p = product(catList, proteinList, fatList, carbohydrateList)</code></pre></details></div><div class="archive-cell" data-cell="70"><details class="study-details"><summary>Cell 70 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+explanatoryDataPFCcat = pd.DataFrame(p,
+    columns=[&quot;Category&quot;,
+&quot;Protein_g&quot;,
+&quot;Fat_g&quot;,
+&quot;Carbohydrate_g&quot;])</code></pre></details></div><div class="archive-cell" data-cell="71"><details class="study-details"><summary>Cell 71 / 99 · code</summary><pre class="source-code" tabindex="0"><code>explanatoryDataPFCcat</code></pre></details></div><div class="archive-cell" data-cell="72"><details class="study-details"><summary>Cell 72 / 99 · code</summary><pre class="source-code" tabindex="0"><code>mse1 = mdl_calories_vs_P_F_C_cat.mse_resid
+rse1 = np.sqrt(mse1)
+print(mdl_calories_vs_P_F_C_cat.rsquared_adj)
+print(mdl_calories_vs_P_F_C_cat.rsquared)
+print(&quot;MSE:&quot;,mse1)
+print(&quot;RSE:&quot;,rse1)</code></pre></details></div><div class="archive-cell" data-cell="73"><details class="study-details"><summary>Cell 73 / 99 · code</summary><pre class="source-code" tabindex="0"><code>predictionData = explanatoryDataPFCcat.assign(
+    Calories_kcal = mdl_calories_vs_P_F_C_cat.predict(explanatoryDataPFCcat)
+)</code></pre></details></div><div class="archive-cell" data-cell="74"><details class="study-details"><summary>Cell 74 / 99 · code</summary><pre class="source-code" tabindex="0"><code>predictionData</code></pre></details></div><div class="archive-cell" data-cell="75"><details class="study-details"><summary>Cell 75 / 99 · code</summary><pre class="source-code" tabindex="0"><code>predp = predictionData[predictionData[&#x27;Protein_g&#x27;] == 10] 
+predf = predictionData[predictionData[&#x27;Fat_g&#x27;] == 10] 
+predcarb = predictionData[predictionData[&#x27;Carbohydrate_g&#x27;] == 10] </code></pre></details></div><div class="archive-cell" data-cell="76"><details class="study-details"><summary>Cell 76 / 99 · code</summary><pre class="source-code" tabindex="0"><code>predpZeroF = predp[predp[&#x27;Fat_g&#x27;] == 0]
+predfZeroP = predf[predf[&#x27;Protein_g&#x27;] == 0]
+predcarbZeroP = predcarb[predcarb[&#x27;Protein_g&#x27;] == 0]</code></pre></details></div><div class="archive-cell" data-cell="77"><details class="study-details"><summary>Cell 77 / 99 · code</summary><pre class="source-code" tabindex="0"><code>predpZeroFZeroCarb = predpZeroF[predpZeroF[&#x27;Carbohydrate_g&#x27;] == 0]
+predfZeroPZeroCarb = predfZeroP[predfZeroP[&#x27;Carbohydrate_g&#x27;] == 0]
+predcarbZeroPZeroF = predcarbZeroP[predcarbZeroP[&#x27;Fat_g&#x27;] == 0]</code></pre></details></div><div class="archive-cell" data-cell="78"><details class="study-details"><summary>Cell 78 / 99 · code</summary><pre class="source-code" tabindex="0"><code>print(&quot;Calories mean in 10 gm protein:&quot;,predpZeroFZeroCarb[&quot;Calories_kcal&quot;].mean())
+print(&quot;Calories mean in 10 gm Fat:&quot;,predfZeroPZeroCarb[&quot;Calories_kcal&quot;].mean())
+print(&quot;Calories mean in 10 gm carbohydrates :&quot;,predcarbZeroPZeroF[&quot;Calories_kcal&quot;].mean())</code></pre></details></div><div class="archive-cell" data-cell="79"><span class="archive-cell-label" dir="ltr">Cell 79 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>the last model is better that the first and it doesn&#x27;t work with very small amount of fat , carbohydrates and proteins. we find that 1gm of fat equal 9 kcal and 1 gm of protein and carbohydrate equal 4 kcal.</h4></div></div><div class="archive-cell" data-cell="80"><span class="archive-cell-label" dir="ltr">Cell 80 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>for example as first row of dataframe NoZeroCal we predict the calories of first row as 300 </h4>
+<h4>we find around 7 calories as a difference </h4></div></div><div class="archive-cell" data-cell="81"><span class="archive-cell-label" dir="ltr">Cell 81 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>to see what could be the hidden sources of calories in food</h4></div></div><div class="archive-cell" data-cell="82"><span class="archive-cell-label" dir="ltr">Cell 82 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>fit model to discover the hidden sources of calories</h4></div></div><div class="archive-cell" data-cell="83"><span class="archive-cell-label" dir="ltr">Cell 83 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>may be from fiber or alcohol. so we use df_food_Nna to drop any missing data. So we fit another model to predict if alcohol and fiber produce calories.</h4></div></div><div class="archive-cell" data-cell="84"><details class="study-details"><summary>Cell 84 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_food_Nna_no = DataframeAddCol(df_food_Nna,dictcol)</code></pre></details></div><div class="archive-cell" data-cell="85"><details class="study-details"><summary>Cell 85 / 99 · code</summary><pre class="source-code" tabindex="0"><code>NoZeroCalNna = df_food_Nna_no[df_food_Nna_no[&#x27;Calories_kcal&#x27;] != 0.0]</code></pre></details></div><div class="archive-cell" data-cell="86"><details class="study-details"><summary>Cell 86 / 99 · code</summary><pre class="source-code" tabindex="0"><code>NoZeroCalNna.info()</code></pre></details></div><div class="archive-cell" data-cell="87"><details class="study-details"><summary>Cell 87 / 99 · code</summary><pre class="source-code" tabindex="0"><code>mdl_calories_vs_All = ols(&#x27;Calories_kcal ~ Protein_g + Fat_g + Carbohydrate_g + Alcohol_g + Fiber_g + Category + Category : Protein_g + Category:Fat_g + Category : Carbohydrate_g + Category : Alcohol_g + Category : Fiber_g + 0&#x27;, data=NoZeroCal).fit()</code></pre></details></div><div class="archive-cell" data-cell="88"><details class="study-details"><summary>Cell 88 / 99 · code</summary><pre class="source-code" tabindex="0"><code>CatList = list(NoZeroCalNna[&#x27;Category&#x27;].unique())
+AlcList = np.arange(0,50,10)
+FibList = np.arange(0,50,10)
+proteinList = np.arange(0,50,10)
+fatList = np.arange(0,50,10)
+carbohydrateList = np.arange(0,50,10)
+</code></pre></details></div><div class="archive-cell" data-cell="89"><details class="study-details"><summary>Cell 89 / 99 · code</summary><pre class="source-code" tabindex="0"><code>p1 = product(CatList, AlcList, FibList, proteinList, fatList, carbohydrateList )</code></pre></details></div><div class="archive-cell" data-cell="90"><details class="study-details"><summary>Cell 90 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+explanatoryDataAll = pd.DataFrame(p1,
+    columns=[&quot;Category&quot;,
+&quot;Alcohol_g&quot;,
+&quot;Fiber_g&quot;,
+            &quot;Protein_g&quot;,
+            &quot;Fat_g&quot;,
+            &quot;Carbohydrate_g&quot;])</code></pre></details></div><div class="archive-cell" data-cell="91"><details class="study-details"><summary>Cell 91 / 99 · code</summary><pre class="source-code" tabindex="0"><code>mse2 = mdl_calories_vs_All.mse_resid
+rse2 = np.sqrt(mse2)
+print(mdl_calories_vs_All.rsquared_adj)
+print(mdl_calories_vs_All.rsquared)
+print(&quot;MSE:&quot;,mse2)
+print(&quot;RSE:&quot;,rse2)</code></pre></details></div><div class="archive-cell" data-cell="92"><details class="study-details"><summary>Cell 92 / 99 · code</summary><pre class="source-code" tabindex="0"><code>predictionDataAll = explanatoryDataAll.assign(
+    Calories_kcal = mdl_calories_vs_All.predict(explanatoryDataAll)
+)</code></pre></details></div><div class="archive-cell" data-cell="93"><details class="study-details"><summary>Cell 93 / 99 · code</summary><pre class="source-code" tabindex="0"><code>predictionDataAll</code></pre></details></div><div class="archive-cell" data-cell="94"><details class="study-details"><summary>Cell 94 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+def dfonecolvalue(df, col1, val1, val2,li):
+    &quot;&quot;&quot;
+    make one column with val1 and selected column of df in li list set their values to val2.
+    df: dataframe of choice.
+    col1: column that you want to set to the selected value.
+    val1: value you want to select from col1.
+    val2: value you want to select from all columns of the dataframe.
+    li list of columns that set values to val2
+    
+
+    Returns a new dataframe named as df + col1 + val1.
+    &quot;&quot;&quot;
+    new_df = df.copy()  # Create a copy of the original dataframe
+    new_df = new_df[new_df[col1]==val1]
+    for i in li:
+        new_df = new_df[new_df[i]==val2]
+        
+    return new_df
+   
+</code></pre></details></div><div class="archive-cell" data-cell="95"><details class="study-details"><summary>Cell 95 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+listAlc = [&quot;Fiber_g&quot;,&quot;Protein_g&quot;,&quot;Fat_g&quot;,&quot;Carbohydrate_g&quot;]
+listFiber = [&quot;Alcohol_g&quot;,&quot;Protein_g&quot;,&quot;Fat_g&quot;,&quot;Carbohydrate_g&quot;]
+ 
+   
+df_10_Alc_predict = dfonecolvalue(predictionDataAll,&quot;Alcohol_g&quot;,10,0,listAlc)
+df_10_Fib_predict = dfonecolvalue(predictionDataAll,&quot;Fiber_g&quot;,10,0,listFiber)</code></pre></details></div><div class="archive-cell" data-cell="96"><details class="study-details"><summary>Cell 96 / 99 · code</summary><pre class="source-code" tabindex="0"><code>
+df_10_Alc_predict[&quot;Calories_kcal&quot;].mean()</code></pre></details></div><div class="archive-cell" data-cell="97"><details class="study-details"><summary>Cell 97 / 99 · code</summary><pre class="source-code" tabindex="0"><code>df_10_Fib_predict[&quot;Calories_kcal&quot;].mean()</code></pre></details></div><div class="archive-cell" data-cell="98"><span class="archive-cell-label" dir="ltr">Cell 98 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>last we see that alcohol can give us around 7 kcal, this is hidden source of calories.</h4></div></div><div class="archive-cell" data-cell="99"><span class="archive-cell-label" dir="ltr">Cell 99 / 99 · markdown</span><div class="archive-text" lang="en" dir="ltr"><h4>please, leave comment to help me to improve my skills </h4>
+<h4>thanks 🙏 🌹❤️</h4></div></div></div></details>
+<div class="source-downloads"><a href="learning/nutrition/original_2023_reviewed.ipynb" download>Download archived notebook (.ipynb)</a><a href="https://www.datacamp.com/datalab/w/fdca12cd-5848-4e96-a15c-501ce409e1ad" target="_blank" rel="noopener">Original DataCamp publication ↗</a></div><p class="caption">Original publication: 11 December 2023. Data: DataCamp’s “What Foods Are the Most Nutritious?”, adapted from USDA FoodData Central. This was an unjudged learning competition. <a href="https://fdc.nal.usda.gov/download-datasets.html" target="_blank" rel="noopener">USDA FoodData Central ↗</a></p><div class="hero-actions"><a class="button button-primary" href="nutrition.html">Back to the case study</a><a class="button button-secondary" href="learning.html">Explore the learning record</a></div></section>
+</main><footer><span>Shamseldeen Ismaiil · Pharmacy knowledge. Analytical clarity.</span><a href="mailto:shams@shamsinsights.com">shams@shamsinsights.com</a></footer><script src="script.js?v=arabic3"></script><script src="locale.js?v=arabic3" defer></script></body></html>
