@@ -97,3 +97,15 @@ When the PBIX or public report changes, refresh its screenshots, metrics, DAX re
 The [learning record](https://shamsinsights.com/learning.html) documents 74 completed courses, 7 completed tracks and 25 guided project completion records as of 23 September 2026. The count preserves legacy entries and is not a claim of 25 distinct production projects.
 
 The [food composition case study](https://shamsinsights.com/nutrition.html) documents a December 2023 DataCamp publication and a reproducible 2026 review of 7,793 food records. Source and results: [learning/nutrition](learning/nutrition). Course and track verification links: [learning](learning).
+
+
+## Arabic and English editions
+
+- [English portfolio](https://shamsinsights.com/) · [البورتفوليو بالعربية](https://shamsinsights.com/index-ar.html)
+- [Learning and certificates](https://shamsinsights.com/learning.html) · [رحلة التعلم والشهادات](https://shamsinsights.com/learning-ar.html)
+- [Food analysis](https://shamsinsights.com/nutrition.html) · [تحليل الأغذية](https://shamsinsights.com/nutrition-ar.html)
+- [Power BI case study](https://shamsinsights.com/saudi-pharma.html) · [دراسة Power BI](https://shamsinsights.com/saudi-pharma-ar.html)
+
+The learning pages contain 11 original certificate images (7 tracks and 4 selected courses), original PDFs, official verification links, a dated learning journey and direct access to the public case studies. All 74 course links and 25 guided completion records remain searchable. Certificate dates follow the official PDFs; course and track statements are distinct from professional certification exams.
+
+Arabic pages translate the narrative, guide, metric definitions and interface. Official course names, source code and the original embedded Power BI report remain in English. The surrounding site works without sign-in; DataCamp exercise pages may require an account or subscription.
