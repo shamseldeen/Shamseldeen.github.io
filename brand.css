@@ -7,6 +7,10 @@
   --brand-teal: #009f91;
 }
 
+.site-header {
+  padding-block: 14px;
+}
+
 .site-header .brand {
   gap: 10px;
   min-height: 44px;
@@ -45,11 +49,25 @@
 
 html[lang="ar"] .site-header .brand-name {
   letter-spacing: 0;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 html[lang="ar"] .site-header .brand-text {
   gap: 0;
+}
+
+html[lang="ar"] .site-header .brand-text small {
+  line-height: 1.25;
+}
+
+.site-header .menu-button {
+  flex: 0 0 44px;
+  width: 44px;
+  padding: 8px;
+}
+
+.site-header .menu-button span {
+  margin-inline: auto;
 }
 
 /* The warm accent is decorative; small text retains a darker readable colour. */
@@ -71,6 +89,8 @@ html[lang="ar"] .site-header .brand-text {
 }
 
 @media (max-width: 360px) {
-  .site-header .brand-name { font-size: 19px; }
+  .site-header .brand { gap: 7px; }
+  .site-header .brand-name { font-size: 18px; }
+  .brand-symbol { width: 30px; height: 30px; }
   .site-header > .language-switch svg { display: none; }
 }
