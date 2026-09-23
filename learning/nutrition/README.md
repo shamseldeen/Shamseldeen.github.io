@@ -20,6 +20,18 @@ The 98-cell submitted notebook and the later 99-cell workbook contain the same a
 
 ## Reproduce the 2026 review
 
+The September 23 vitamin C update uses the clearer public title **Food Nutrition
+Analysis: Vitamin C and Calorie Modeling**. The DataCamp workbook now opens with
+the reviewed findings and interpretation limits; historical modeling cells are
+identified as learning material. The archived 2023 notebook here remains unchanged.
+
+Run `python vitamin_c_analysis.py` from this directory to reproduce the corrected
+fruit result. It reloads the source, preserves missing vitamin C, ranks 349 of 355
+fruit records, and reports every tied maximum. Raw acerola ranks first at
+**1,677.6 mg per 100 g**; the original integer printout truncated this to 1,677.
+Six fruit records lack vitamin C values. The ranking is specific to this dataset
+and includes fresh, juiced and dried forms, not standardized usual servings.
+
 ```bash
 python -m pip install -r requirements.txt
 python reviewed_analysis.py --data nutrition.csv --output results
