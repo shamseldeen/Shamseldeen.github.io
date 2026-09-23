@@ -1,10 +1,10 @@
 /* Shams Insights: one symbol, localized wordmarks, and accessible UI colours. */
 :root {
   --ink: #102a43;
-  --green: #00766c;
-  --mint: #dff3ee;
+  --brand-emerald: #087f5b;
+  --green: var(--brand-emerald);
+  --mint: #dff3e9;
   --brand-sun: #f5ae36;
-  --brand-teal: #009f91;
 }
 
 .site-header {
@@ -37,6 +37,23 @@
   font-size: 25px;
   font-weight: 700;
   letter-spacing: -.035em;
+}
+
+/* One vertical initial echoes the chart without altering either script. */
+.site-header .brand-initial {
+  color: var(--brand-emerald);
+}
+
+.button-primary {
+  background: var(--brand-emerald);
+  border-color: var(--brand-emerald);
+  color: #fff;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: var(--forest);
+  border-color: var(--forest);
 }
 
 .site-header .brand-text small {
