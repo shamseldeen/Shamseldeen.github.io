@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Pharmacy data warehouse layers</title>
+  <desc id="desc">Bronze is the current development layer. Silver and Gold are planned layers.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#0b2f26" opacity=".08"/></pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0 6 3 0 6" fill="none" stroke="#759386" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="960" height="540" fill="#eef1e8"/>
+  <rect width="960" height="540" fill="url(#grid)"/>
+  <circle cx="835" cy="50" r="185" fill="#dce7dc" opacity=".65"/>
+  <path d="M309 268H356M604 268H650" fill="none" stroke="#759386" stroke-width="3" marker-end="url(#arrow)"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <rect x="62" y="124" width="242" height="294" rx="18" fill="#fffdf7" stroke="#cc8b58" stroke-width="2"/>
+    <rect x="75" y="137" width="216" height="8" rx="4" fill="#c98852"/>
+    <g fill="#dfb185" stroke="#9b653f" stroke-width="2">
+      <path d="M129 206V280C129 306 237 306 237 280V206"/>
+      <ellipse cx="183" cy="206" rx="54" ry="17" fill="#f2d7bb"/>
+      <path d="M129 242C129 267 237 267 237 242" fill="none"/>
+    </g>
+    <text x="183" y="351" fill="#0b2f26" font-size="24" font-weight="700" letter-spacing="2">BRONZE</text>
+    <text x="183" y="384" fill="#856143" font-size="13" letter-spacing="1.5">CURRENT LAYER</text>
+    <rect x="363" y="124" width="242" height="294" rx="18" fill="#fffdf7" stroke="#abb9b0" stroke-width="2" stroke-dasharray="7 6"/>
+    <g fill="#e5ebe5" stroke="#91a59a" stroke-width="2">
+      <path d="M430 206V280C430 306 538 306 538 280V206"/>
+      <ellipse cx="484" cy="206" rx="54" ry="17" fill="#f2f5ef"/>
+      <path d="M430 242C430 267 538 267 538 242" fill="none"/>
+    </g>
+    <text x="484" y="351" fill="#496858" font-size="24" font-weight="700" letter-spacing="2">SILVER</text>
+    <text x="484" y="384" fill="#60756a" font-size="13" letter-spacing="1.5">PLANNED</text>
+    <rect x="664" y="124" width="234" height="294" rx="18" fill="#fffdf7" stroke="#b4b898" stroke-width="2" stroke-dasharray="7 6"/>
+    <g fill="#eae7d0" stroke="#a9a274" stroke-width="2">
+      <path d="M727 206V280C727 306 835 306 835 280V206"/>
+      <ellipse cx="781" cy="206" rx="54" ry="17" fill="#f5f1dd"/>
+      <path d="M727 242C727 267 835 267 835 242" fill="none"/>
+    </g>
+    <text x="781" y="351" fill="#646b48" font-size="24" font-weight="700" letter-spacing="2">GOLD</text>
+    <text x="781" y="384" fill="#737955" font-size="13" letter-spacing="1.5">PLANNED</text>
+  </g>
+</svg>
