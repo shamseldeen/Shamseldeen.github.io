@@ -108,4 +108,7 @@ The [food composition case study](https://shamsinsights.com/nutrition.html) docu
 
 The learning pages contain 11 original certificate images (7 tracks and 4 selected courses), original PDFs, official verification links, a dated learning journey and direct access to the public case studies. All 74 course links and 25 guided completion records remain searchable. Certificate dates follow the official PDFs; course and track statements are distinct from professional certification exams.
 
-Arabic pages translate the narrative, guide, metric definitions and interface. Official course names, source code and the original embedded Power BI report remain in English. The surrounding site works without sign-in; DataCamp exercise pages may require an account or subscription.
+Arabic pages translate the narrative, guide, metric definitions and interface. Arabic display titles accompany the original English course, project and certificate names, and both are searchable. Original certificates, source code and the embedded Power BI report retain their source language. The surrounding site works without sign-in; DataCamp exercise pages may require an account or subscription.
+
+
+The globe language control stays visible on mobile and preserves the current section and query when switching. Arabic pages link to the Arabic CV (`assets/Shamseldeen_Ismaiil_Data_Analyst_CV_AR.pdf`); English pages retain the English CV. Update each English/Arabic page pair together when changing content.
