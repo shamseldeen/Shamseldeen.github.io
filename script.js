@@ -22,7 +22,7 @@ if (menuButton && navigation) {
       menuButton.focus();
     }
   });
-  window.matchMedia('(min-width: 721px)').addEventListener('change', closeNavigation);
+  window.matchMedia('(min-width: 851px)').addEventListener('change', closeNavigation);
 }
 const today = new Date();
 const year = document.getElementById('year');
@@ -55,3 +55,4 @@ if (reportShell && loadReportButton && resetReportButton && reportStatus) {
     reportStatus.textContent = isArabic ? 'جارٍ إعادة تحميل التقرير من صفحة النظرة العامة. راجع الفلاتر قبل بدء مقارنة جديدة.' : 'Reloading the report at Executive Overview. Check the slicers before starting a new comparison.';
   });
 }
+
