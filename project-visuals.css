@@ -1,0 +1,28 @@
+/* Project imagery shares the existing palette and preserves native page direction. */
+.has-project-cover { --cover-padding: 1.5rem; overflow: hidden; background: var(--paper); border-radius: 8px; }
+.public-project.has-project-cover { --cover-padding: 2rem; }
+.project-cover { margin: calc(-1 * var(--cover-padding)) calc(-1 * var(--cover-padding)) 1.5rem; border-bottom: 1px solid var(--line); background: #ecefe7; }
+.project-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.project-cover--report img { object-fit: contain; padding: 1rem; background: #e5ece9; }
+.project-cover figcaption { max-width: none; margin: 0; padding: .65rem var(--cover-padding); background: var(--paper); color: var(--muted); font-size: .75rem; line-height: 1.6; }
+.project-cover-link { display: block; }
+.project-cover-link:focus-visible { outline: 3px solid var(--orange); outline-offset: -4px; }
+.has-project-cover .project-meta { align-items: flex-start; }
+.nutrition-hero-layout { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); align-items: center; gap: clamp(2rem,4vw,4rem); }
+.nutrition-hero-layout > * { min-width: 0; }
+.food-study .nutrition-hero-layout h1 { font-size: clamp(2.4rem,4.1vw,4rem); line-height: 1.08; }
+.nutrition-hero-layout .lead { font-size: 1.06rem; margin-bottom: 0; }
+.nutrition-hero-figure { margin: 0; overflow: hidden; border: 1px solid #d8d9ce; border-radius: 10px; background: var(--paper); box-shadow: 0 16px 42px #0b2f260d; }
+.nutrition-hero-figure img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.nutrition-hero-figure figcaption { padding: .85rem 1.1rem; font-size: .76rem; }
+@media (max-width: 900px) {
+  .nutrition-hero-layout { grid-template-columns: 1fr; gap: 1.7rem; }
+  .nutrition-hero-figure { max-width: 700px; }
+  .food-study .nutrition-hero-layout h1 { font-size: clamp(2.3rem,6vw,3.5rem); }
+}
+@media (max-width: 640px) {
+  .public-project.has-project-cover { --cover-padding: 1.3rem; }
+  .project-cover { margin-bottom: 1.2rem; }
+  .nutrition-hero-layout .lead { font-size: 1rem; }
+  .nutrition-hero-figure figcaption { padding: .7rem .9rem; }
+}

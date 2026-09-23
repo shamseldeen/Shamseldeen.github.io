@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Image features, PCA and SVM exploration</title>
+  <desc id="desc">A conceptual image-to-features workflow. The shapes are illustrative and are not tissue samples or model results.</desc>
+  <rect width="960" height="540" fill="#e9eee7"/>
+  <circle cx="867" cy="505" r="240" fill="#dbe6dc"/>
+  <rect x="70" y="101" width="318" height="338" rx="18" fill="#fffdf7" stroke="#c4d0c4" stroke-width="2"/>
+  <g transform="translate(97 128)" fill="#dbe6dc">
+    <rect width="80" height="80" rx="8"/><rect x="91" width="80" height="80" rx="8"/><rect x="182" width="80" height="80" rx="8"/>
+    <rect y="91" width="80" height="80" rx="8"/><rect x="91" y="91" width="80" height="80" rx="8"/><rect x="182" y="91" width="80" height="80" rx="8"/>
+    <rect y="182" width="80" height="80" rx="8"/><rect x="91" y="182" width="80" height="80" rx="8"/><rect x="182" y="182" width="80" height="80" rx="8"/>
+    <g fill="#6e9b86"><circle cx="40" cy="40" r="18"/><rect x="113" y="22" width="36" height="36" rx="7"/><path d="M222 19 246 57H198Z"/><rect x="22" y="113" width="36" height="36" rx="7"/><circle cx="222" cy="131" r="18"/><path d="M40 199 64 237H16Z"/><circle cx="131" cy="222" r="18"/><rect x="204" y="204" width="36" height="36" rx="7"/></g>
+    <rect x="91" y="91" width="80" height="80" rx="8" fill="#0b2f26"/>
+    <path d="M112 130H150M131 111V149" stroke="#f0c399" stroke-width="4"/>
+  </g>
+  <path d="M412 270H480M468 258 480 270 468 282" fill="none" stroke="#799685" stroke-width="3"/>
+  <rect x="510" y="136" width="362" height="94" rx="14" fill="#fffdf7" stroke="#bfcebf" stroke-width="2"/>
+  <g fill="#176b52"><rect x="538" y="162" width="10" height="40" rx="3"/><rect x="556" y="171" width="10" height="31" rx="3"/><rect x="574" y="154" width="10" height="48" rx="3"/></g>
+  <text x="620" y="191" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#244d3c">FEATURES</text>
+  <path d="M691 230V259M683 251 691 259 699 251" fill="none" stroke="#799685" stroke-width="3"/>
+  <rect x="510" y="275" width="167" height="128" rx="14" fill="#0b2f26"/>
+  <rect x="705" y="275" width="167" height="128" rx="14" fill="#fffdf7" stroke="#c99567" stroke-width="2"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle"><text x="593" y="334" fill="#fffdf7" font-size="30" font-weight="700">PCA</text><text x="593" y="367" fill="#b5d0bf" font-size="13">REDUCTION</text><text x="788" y="334" fill="#805c3f" font-size="30" font-weight="700">SVM</text><text x="788" y="367" fill="#805c3f" font-size="13">CLASSIFICATION</text></g>
+</svg>
