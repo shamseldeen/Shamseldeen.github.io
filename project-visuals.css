@@ -1,4 +1,6 @@
 /* Project imagery shares the existing palette and preserves native page direction. */
+.supporting-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.has-project-cover { scroll-margin-top: 110px; }
 .has-project-cover { --cover-padding: 1.5rem; overflow: hidden; background: var(--paper); border-radius: 8px; }
 .public-project.has-project-cover { --cover-padding: 2rem; }
 .project-cover { margin: calc(-1 * var(--cover-padding)) calc(-1 * var(--cover-padding)) 1.5rem; border-bottom: 1px solid var(--line); background: #ecefe7; }
@@ -25,4 +27,7 @@
   .project-cover { margin-bottom: 1.2rem; }
   .nutrition-hero-layout .lead { font-size: 1rem; }
   .nutrition-hero-figure figcaption { padding: .7rem .9rem; }
+}
+@media (max-width: 760px) {
+  .supporting-grid { grid-template-columns: minmax(0,1fr); }
 }
