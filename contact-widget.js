@@ -56,9 +56,6 @@
 
   const toggle = widget.querySelector('button');
   const panel = widget.querySelector('.contact-widget__panel');
-  const hero = document.querySelector('.hero, .case-hero, .learning-hero');
-  const dashboard = document.getElementById('dashboard');
-  const contact = document.getElementById('contact');
   const navigationToggle = document.getElementById('menuButton');
 
   function setOpen(open, returnFocus = false) {
@@ -86,18 +83,10 @@
   });
   panel.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false, true)));
 
-  // Keep the introduction, live report, contact section and modal views clear.
-  function inViewport(element) {
-    if (!element) return false;
-    const rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-  }
+  // Stay visible throughout normal browsing; yield only to modal/fullscreen views.
   function updateVisibility() {
-    const pastHero = hero ? hero.getBoundingClientRect().bottom <= 100 : window.scrollY > 250;
-    const obscured = inViewport(dashboard) || inViewport(contact) ||
-      navigationToggle?.getAttribute('aria-expanded') === 'true' ||
+    const hidden = navigationToggle?.getAttribute('aria-expanded') === 'true' ||
       document.documentElement.classList.contains('image-viewer-open') || Boolean(document.fullscreenElement);
-    const hidden = !pastHero || obscured;
     if (hidden && !widget.hidden) {
       // Do not leave keyboard focus inside a control that has become hidden.
       if (widget.contains(document.activeElement)) document.activeElement.blur();
@@ -111,12 +100,7 @@
     scheduled = true;
     window.requestAnimationFrame(() => { scheduled = false; updateVisibility(); });
   }
-  window.addEventListener('scroll', scheduleUpdate, { passive: true });
-  window.addEventListener('resize', scheduleUpdate);
-  window.addEventListener('load', scheduleUpdate);
   document.addEventListener('fullscreenchange', scheduleUpdate);
-  if (window.visualViewport) window.visualViewport.addEventListener('resize', scheduleUpdate);
-  if (typeof ResizeObserver !== 'undefined' && hero) new ResizeObserver(scheduleUpdate).observe(hero);
   const observer = new MutationObserver(scheduleUpdate);
   observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   if (navigationToggle) observer.observe(navigationToggle, { attributes: true, attributeFilter: ['aria-expanded'] });
