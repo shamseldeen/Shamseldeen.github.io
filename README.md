@@ -89,3 +89,11 @@ Open `http://localhost:8000`. GitHub Pages deploys updates from `main`.
 ## Updating the case study
 
 When the PBIX or public report changes, refresh its screenshots, metrics, DAX reference and interpretation notes together. Screenshots and the written baseline describe the documented snapshot; the embedded report is hosted separately in Power BI.
+
+
+
+## DataCamp learning and applied analysis
+
+The [learning record](https://shamsinsights.com/learning.html) documents 74 completed courses, 7 completed tracks and 25 guided project completion records as of 23 September 2026. The count preserves legacy entries and is not a claim of 25 distinct production projects.
+
+The [food composition case study](https://shamsinsights.com/nutrition.html) documents a December 2023 DataCamp publication and a reproducible 2026 review of 7,793 food records. Source and results: [learning/nutrition](learning/nutrition). Course and track verification links: [learning](learning).
