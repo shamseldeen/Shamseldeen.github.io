@@ -26,3 +26,35 @@ Final prompt:
 - Images reserve their dimensions. Cards use lazy loading; the Food hero image has high fetch priority.
 - Illustrations include no numerical results. The study's existing figures remain the source of quantitative comparisons.
 - The full analysis remains focused on charts, code and results. Rebuilding it from `learning/nutrition/build_web_analysis.py` preserves the case-study header and styles without adding a duplicate cover.
+# Interior-page visuals · September 2026
+
+`learning-workspace-v1.webp` (1600 × 900) and
+`learning-workspace-v1-small.webp` (640 × 360) are a generated editorial
+illustration used on the learning page and the homepage learning section.
+They do not depict the author's actual desk, a certificate, or project results.
+Created with the built-in image-generation tool (new image); resized and
+compressed to WebP for delivery. The original generation remains separate.
+
+Final prompt:
+
+```text
+Use case: photorealistic-natural
+Asset type: wide editorial hero image for the learning page of Shams Insights, a professional bilingual data analyst portfolio.
+Primary request: a calm, polished visual about studying data and turning learning into practical analysis.
+Scene and subject: a cream matte desk seen at a graceful three-quarter overhead angle, an open blank ivory notebook with subtle pale square grid, a simple deep forest-green hardback study book beneath it, a sharpened natural wood pencil, and part of a contemporary silver laptop. The laptop screen is at an angle, showing only a soft abstract arrangement of green rectangular interface shapes, with no readable text, no numbers, no charts or claims. A small forest-green ceramic cup sits near the upper edge.
+Style: editorial still-life photography, realistic paper and ceramic textures, refined and welcoming. Soft warm daylight and gentle shadows. Spacious and minimal, with strong hierarchy and restrained objects.
+Color palette: cream #f6f3eb, paper #fffdf7, deep forest green #0b2f26, muted sage; a tiny warm terracotta accent is acceptable.
+Composition: landscape 16:9; entire notebook and green book visible centrally, laptop partly visible on one side. Balanced as a standalone image with no overlaid text. No people, no hands, no logos, no letters, no numbers, no fake certificate, no watermark, no pills or clinical equipment. This is an illustrative workspace, not a photograph of the user's actual work or proof of project results.
+```
+
+The nutrition pages reuse the existing acerola/guava illustration. Vitamin C
+and model-error charts come from the existing reproducible project outputs;
+their data and values were not changed. The Power BI hero uses the existing
+actual report preview and links to the full screenshot. The three data-grain
+cards reproduce the documented table grains, row counts and dimensions.
+
+All ten pages load `image-viewer.js` and the shared responsive imagery CSS.
+The native image dialog supports keyboard focus, Escape, a close button and
+an original-image link. Project navigation and certificate verification links
+retain their destinations. Full-analysis hero changes are also recorded in
+`learning/nutrition/build_web_analysis.py` so a rebuild retains the layout.
