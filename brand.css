@@ -123,6 +123,10 @@ html[lang="ar"] .site-header .brand-text small {
   gap: 1rem 1.5rem;
 }
 
+html[dir="rtl"] .footer-contact .contact-icon-link[dir="ltr"] {
+  flex-direction: row-reverse;
+}
+
 .footer-meta {
   display: flex;
   flex-wrap: wrap;
