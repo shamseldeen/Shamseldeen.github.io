@@ -1,0 +1,86 @@
+{
+  "reviewDate": "2026-09-23",
+  "originalPublicationDate": "2023-12-11",
+  "rows": 7793,
+  "categories": 25,
+  "completeAllOriginalColumns": 5331,
+  "missing": {
+    "calories": 0,
+    "protein": 0,
+    "carb": 0,
+    "fat": 0,
+    "cholesterol": 399,
+    "fiber": 562,
+    "water": 0,
+    "alcohol": 2394,
+    "vitamin_c": 461
+  },
+  "modelSampleRows": 5334,
+  "waterCaloriesPearsonR": -0.8954571656706287,
+  "baselineCoefficients": {
+    "protein": 4.136612417623548,
+    "fat": 8.844052616228767,
+    "carb": 3.854099960542392
+  },
+  "topFruitVitaminC": [
+    {
+      "Item": "Acerola, (west indian cherry), raw",
+      "vitamin_c": 1677.6
+    },
+    {
+      "Item": "Acerola juice, raw",
+      "vitamin_c": 1600.0
+    },
+    {
+      "Item": "Guavas, common, raw",
+      "vitamin_c": 228.3
+    },
+    {
+      "Item": "Jujube, Chinese, fresh, dried",
+      "vitamin_c": 217.6
+    },
+    {
+      "Item": "Litchis, dried",
+      "vitamin_c": 183.0
+    }
+  ],
+  "models": [
+    {
+      "model": "Macronutrients",
+      "train_rows": 4278,
+      "test_rows": 1056,
+      "parameters": 3,
+      "rank": 3,
+      "test_mae_kcal": 6.861100381787,
+      "test_rmse_kcal": 15.37612425287229,
+      "test_r2": 0.9914962237490762
+    },
+    {
+      "model": "Category interactions",
+      "train_rows": 4278,
+      "test_rows": 1056,
+      "parameters": 100,
+      "rank": 100,
+      "test_mae_kcal": 6.040010016257492,
+      "test_rmse_kcal": 15.707458450764872,
+      "test_r2": 0.991125785862498
+    },
+    {
+      "model": "Alcohol and fiber interactions",
+      "train_rows": 4278,
+      "test_rows": 1056,
+      "parameters": 150,
+      "rank": 126,
+      "test_mae_kcal": 4.703832731474486,
+      "test_rmse_kcal": 13.554107367622553,
+      "test_r2": 0.9933921540741056
+    }
+  ],
+  "limitations": [
+    "A random row split is an internal check, not validation on a new population. Similar products can occur across the split.",
+    "Complete-case sampling can be biased; missing alcohol values are common.",
+    "Category-interaction models can be rank deficient; least squares provides one minimum-norm solution.",
+    "Energy is closely related to nutrient quantities by construction. High R-squared is not clinical evidence.",
+    "This descriptive food-composition study cannot infer health outcomes or recommend diets."
+  ]
+}

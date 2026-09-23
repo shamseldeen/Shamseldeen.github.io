@@ -1,0 +1,771 @@
+{
+  "asOf": "2026-09-23",
+  "xp": 397107,
+  "courses": [
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Object-Oriented Programming in Python",
+      "url": "https://app.datacamp.com/learn/courses/object-oriented-programming-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/66caf1079e6fc4bd8a29b5d08f5921924376bbb1"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Analyzing Marketing Campaigns with pandas",
+      "url": "https://app.datacamp.com/learn/courses/analyzing-marketing-campaigns-with-pandas",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/4729f7608ba48a3f16ae714b1844bf871907ae61"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Analyzing Business Data in SQL",
+      "url": "https://app.datacamp.com/learn/courses/analyzing-business-data-in-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c7383fa4595c7376e86a5a45a0763dc5ed9b2a29"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Applying SQL to Real-World Problems",
+      "url": "https://app.datacamp.com/learn/courses/applying-sql-to-real-world-problems",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/6d7825267ed0cdbd82a01274e32c2b7bc6df0158"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Deep Learning with PyTorch",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-deep-learning-with-pytorch",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/0aa0f859fbfaecf0c04dab0a79cc00e4aa03f198"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Containerization and Virtualization Concepts",
+      "url": "https://app.datacamp.com/learn/courses/containerization-and-virtualization-concepts",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/93fa42e92268924a2030fdd3a44779504f1e98e2"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Model Validation in Python",
+      "url": "https://app.datacamp.com/learn/courses/model-validation-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c552dea46577203152cbae75c39bbc4ecf46ae0a"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Feature Engineering for Machine Learning in Python",
+      "url": "https://app.datacamp.com/learn/courses/feature-engineering-for-machine-learning-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/8c2aa5176e07fe6b64c05cb9018e053f243263aa"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Advanced Deep Learning with Keras",
+      "url": "https://app.datacamp.com/learn/courses/advanced-deep-learning-with-keras",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/42c40554c96b6029eaa2747b6cb4d22ebd9ae6e5"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Data-Driven Decision Making in SQL",
+      "url": "https://app.datacamp.com/learn/courses/data-driven-decision-making-in-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/0657341b8003b072f3fc7157786180c1ee1de84d"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Exploratory Data Analysis in SQL",
+      "url": "https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/7c34067aedae9e92c2c6de58363c7409d202e7d8"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Deep Learning with Keras",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-deep-learning-with-keras",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c9b053d4c25f9cc21fac87ee8257cc75dffb422d"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Marketing Analytics: Predicting Customer Churn in Python",
+      "url": "https://app.datacamp.com/learn/courses/marketing-analytics-predicting-customer-churn-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/115534b97b93b42bd8c0b930b9ae4f7e9ee77b6b"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Machine Learning for Time Series Data in Python",
+      "url": "https://app.datacamp.com/learn/courses/machine-learning-for-time-series-data-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/eefb3cf5e40016e831a2f640f4360126018ab020"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Dimensionality Reduction in Python",
+      "url": "https://app.datacamp.com/learn/courses/dimensionality-reduction-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/f61fca8cd4ddcc63fde5156a039217945e84991e"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Cluster Analysis in Python",
+      "url": "https://app.datacamp.com/learn/courses/cluster-analysis-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/51118214e29d8b249602561671032d38cabc3f07"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Manipulating Time Series Data in Python",
+      "url": "https://app.datacamp.com/learn/courses/manipulating-time-series-data-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/567c604edb22002c333e3b8a0dcae902d9409d7e"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Database Design",
+      "url": "https://app.datacamp.com/learn/courses/database-design",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/3319cfc33faf7abe6cb0535e328a71ff483b113c"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Writing Efficient Code with pandas",
+      "url": "https://app.datacamp.com/learn/courses/writing-efficient-code-with-pandas",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/f507f857a4067b5aa46420a8410a463bad31e9f0"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Analyzing Social Media Data in Python",
+      "url": "https://app.datacamp.com/learn/courses/analyzing-social-media-data-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/6cc409098816b70df7ac88e569e32fd421ebb644"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Relational Databases in SQL",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-relational-databases-in-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/b8f928fe05a6cd74e4e46a9f4c1a5b300a3b42a5"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Developing Python Packages",
+      "url": "https://app.datacamp.com/learn/courses/developing-python-packages",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/8fe7e6ea5583093c54c4d82a5c59f321bfab1514"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Preprocessing for Machine Learning in Python",
+      "url": "https://app.datacamp.com/learn/courses/preprocessing-for-machine-learning-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/aed784c083fc8fbd145705e8a8c64021f76aef0f"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Functions for Manipulating Data in PostgreSQL",
+      "url": "https://app.datacamp.com/learn/courses/functions-for-manipulating-data-in-postgresql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/af748b1383d98da6c9dfc92325e6105fcf103c59"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Software Engineering Principles in Python",
+      "url": "https://app.datacamp.com/learn/courses/software-engineering-principles-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2f06dbbacfba6f96e67bde05ec0400a52e8c2dba"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Machine Learning for Business",
+      "url": "https://app.datacamp.com/learn/courses/machine-learning-for-business",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/4a3cfbce24c49fa38a30898d1906edbe669b01e9"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Writing Efficient Python Code",
+      "url": "https://app.datacamp.com/learn/courses/writing-efficient-python-code",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/1a17fb1afcd93f2d92159a6f97dc2ee9a1f899f7"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Data Types in Python",
+      "url": "https://app.datacamp.com/learn/courses/data-types-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/e310601c450eb938ce7a16d8dd7074898de1f0c5"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to NumPy",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-numpy",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/ac39d4bee0f02670bc6681d048e8fe3dc6bf90d6"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Shell",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-shell",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/101fc6a060bb8291c58425f5a3b8bbc34b180cbc"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Practicing Coding Interview Questions in Python",
+      "url": "https://app.datacamp.com/learn/courses/practicing-coding-interview-questions-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/48bbbd4c1ec495137b968243b79bf8425eaa3e21"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Extreme Gradient Boosting with XGBoost",
+      "url": "https://app.datacamp.com/learn/courses/extreme-gradient-boosting-with-xgboost",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/69f68651c28432da27089391526e94d0bb539c97"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Machine Learning with Tree-Based Models in Python",
+      "url": "https://app.datacamp.com/learn/courses/machine-learning-with-tree-based-models-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/7c133256ed60ffb18d21db832bd1f3a489d6a07e"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Data Visualization in Power BI",
+      "url": "https://app.datacamp.com/learn/courses/data-visualization-in-power-bi",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/3121dec5ec12f080ab914075854b481cac35bd23"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "PostgreSQL Summary Stats and Window Functions",
+      "url": "https://app.datacamp.com/learn/courses/postgresql-summary-stats-and-window-functions",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/458a62ee1e860a71c8cc5d9e18be126421d17783"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Understanding Data Engineering",
+      "url": "https://app.datacamp.com/learn/courses/understanding-data-engineering",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/eb3a048f50ffd3dfff63391ffe01afc2f320e422"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Linear Classifiers in Python",
+      "url": "https://app.datacamp.com/learn/courses/linear-classifiers-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/46e17d36ff0f6b7156af0ec65def843adba609b5"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to DAX in Power BI",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-dax-in-power-bi",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/7792fbaacc5a20677c77d205c14da65bf9f0d18a"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Power BI",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-power-bi",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/6badf75645740c5eae96625323d340d9863bd777"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Data Manipulation in SQL",
+      "url": "https://app.datacamp.com/learn/courses/data-manipulation-in-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/cdc601848d5c81415eb3d5f164b2021edc1a874f"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Unsupervised Learning in Python",
+      "url": "https://app.datacamp.com/learn/courses/unsupervised-learning-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/73b8b8def5f2e2388ab42683b83c0ad7d171b9f5"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Intermediate Regression with statsmodels in Python",
+      "url": "https://app.datacamp.com/learn/courses/intermediate-regression-with-statsmodels-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/5ceab7b2e65e704d078dbdc167c3c45e33d22dc9"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Hypothesis Testing in Python",
+      "url": "https://app.datacamp.com/learn/courses/hypothesis-testing-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/40a86dab215e54d68e5b801f89d86b83d6544318"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Sampling in Python",
+      "url": "https://app.datacamp.com/learn/courses/sampling-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/be015f7b6272b428b1b5aef404475edf9d460642"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Regression with statsmodels in Python",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-regression-with-statsmodels-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/84a611263ba49e8accf1bcf9dc35dfa693ae2a22"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Working with Dates and Times in Python",
+      "url": "https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/041c089a4f6f54999c6e786587a1355349508d7b"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Data Communication Concepts",
+      "url": "https://app.datacamp.com/learn/courses/data-communication-concepts",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/b67c09c1ebfc591527face90e362f7652ecd9b3d"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Writing Functions in Python",
+      "url": "https://app.datacamp.com/learn/courses/writing-functions-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/13b629f0d4b61f11e827dddabadd9cdc9b090a2f"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Reshaping Data with pandas",
+      "url": "https://app.datacamp.com/learn/courses/reshaping-data-with-pandas",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/88a779d573a39dbf6e1a7fbe813913ac2c5b6a7a"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Working with the OpenAI API",
+      "url": "https://app.datacamp.com/learn/courses/working-with-the-openai-api",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2e22530738c76f5b0379ab08fc6c562dfc838950"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Working with Categorical Data in Python",
+      "url": "https://app.datacamp.com/learn/courses/working-with-categorical-data-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/8904c0cade0fbac31fca59311d374ca0a989ff0a"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Cleaning Data in Python",
+      "url": "https://app.datacamp.com/learn/courses/cleaning-data-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/6194a9bccf9e8da6458c309e45aa2b50ff23b84e"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Supervised Learning with scikit-learn",
+      "url": "https://app.datacamp.com/learn/courses/supervised-learning-with-scikit-learn",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/8731c0fbb58a63582bf0c4356fa0b27fb8e8e7dc"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Intermediate R",
+      "url": "https://app.datacamp.com/learn/courses/intermediate-r",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/f717058add7c73a3c0a68a5e84ada5554571a253"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Joining Data in SQL",
+      "url": "https://app.datacamp.com/learn/courses/joining-data-in-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/7d8179bc8f740807f8c1de9fc1d1bd407459528e"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Intermediate Importing Data in Python",
+      "url": "https://app.datacamp.com/learn/courses/intermediate-importing-data-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/d8a1b9a4c94e1c9d62f3570e1889a6edd0734cf4"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Importing Data in Python",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-importing-data-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/fa61f0fd1c4989b74ba5fcc5c27250ca7860df44"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Intermediate SQL",
+      "url": "https://app.datacamp.com/learn/courses/intermediate-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2d040f16e2215f015e195ea0ffd631cc2cc3ddf5"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Exploratory Data Analysis in Python",
+      "url": "https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/96fae8b9596a1099994137740709ce2ab3a8591c"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Intermediate Data Visualization with Seaborn",
+      "url": "https://app.datacamp.com/learn/courses/intermediate-data-visualization-with-seaborn",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/12eb181f9b02101c91cd6dd5d2ca6636c313e3ef"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Python Toolbox",
+      "url": "https://app.datacamp.com/learn/courses/python-toolbox",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/88dd86eaddf8cb260c63eba01f6800119df1de57"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Understanding ChatGPT",
+      "url": "https://app.datacamp.com/learn/courses/understanding-chatgpt",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/4bf4e9c7050a583670b31d25edddf77684c66c55"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Functions in Python",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-functions-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/4dff4cfabbd2a211d6ece62c0ae5a26c1c52cc88"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Python for Finance",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-python-for-finance",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/f19f8108aa9e12f5d9ebfa1921594ab4ec738566"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to SQL",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-sql",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/1d612beffaca5a7e7d0dca4b1b8bb689b0d87ecc"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to R",
+      "url": "https://app.datacamp.com/learn/courses/free-introduction-to-r",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/5903a7ab03dfe7c7b47db2f1aca5ce90947f3693"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Data Visualization with Seaborn",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-seaborn",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/ec57d70ad0bc019b6bd9b13527cdc640436a3fc9"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Data Science for Business",
+      "url": "https://app.datacamp.com/learn/courses/data-science-for-business",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/b63b30485ec7ee61d16058cadd410fe5e6aaf2d6"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Data Visualization with Matplotlib",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-matplotlib",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/b8fa68a1ff84ba05df2f233c09fd7bf232e7d276"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Statistics in Python",
+      "url": "https://app.datacamp.com/learn/courses/introduction-to-statistics-in-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/fd784ecd21668e00fbc60fe331eeafc214d9ea76"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Joining Data with pandas",
+      "url": "https://app.datacamp.com/learn/courses/joining-data-with-pandas",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/fc89cbc76daf73527ae6629128954fb6db21cb3e"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Data Manipulation with pandas",
+      "url": "https://app.datacamp.com/learn/courses/data-manipulation-with-pandas",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/23905568883f41686803067e91d039c679c4a94b"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Intermediate Python",
+      "url": "https://app.datacamp.com/learn/courses/intermediate-python",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/c487f44168f34ddb7341971c46520725dc94bdff"
+    },
+    {
+      "progress": 100,
+      "status": "Completed",
+      "title": "Introduction to Python",
+      "url": "https://app.datacamp.com/learn/courses/intro-to-python-for-data-science",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/course/d66d0e7c0e9a7fb7bf27e8ea71c19fcd8625555e"
+    }
+  ],
+  "tracks": [
+    {
+      "title": "Data Analyst in Python",
+      "url": "https://app.datacamp.com/learn/career-tracks/data-analyst-with-python",
+      "status": "Completed",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/track/00e39f99693f93b2e06ddba20993ed1e7c168936",
+      "completedOn": "2024-07-09"
+    },
+    {
+      "title": "Python Data Fundamentals",
+      "url": "https://app.datacamp.com/learn/skill-tracks/python-data-fundamentals",
+      "status": "Completed",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/track/2d309557ba14f2345840e451c34a37d1c910c4f9"
+    },
+    {
+      "title": "SQL Fundamentals",
+      "url": "https://app.datacamp.com/learn/skill-tracks/sql-fundamentals",
+      "status": "Completed",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/track/bdf2ff0988ad17c29c3fd970b4c16223510ed599"
+    },
+    {
+      "title": "Data Scientist in Python",
+      "url": "https://app.datacamp.com/learn/career-tracks/data-scientist-in-python",
+      "status": "Completed",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/track/1edae6a3421a3368a9c043e0c63d81ea57df0865"
+    },
+    {
+      "title": "Data Manipulation in Python",
+      "url": "https://app.datacamp.com/learn/skill-tracks/data-manipulation-with-python",
+      "status": "Completed",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/track/4137bdd109b1e9d414d4b7ce618846625cfabbb6"
+    },
+    {
+      "title": "Statistics Fundamentals in Python",
+      "url": "https://app.datacamp.com/learn/skill-tracks/statistics-fundamentals-with-python",
+      "status": "Completed",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/track/1e4c9aaea5d458d07364926a4f60ca109738139b"
+    },
+    {
+      "title": "Importing & Cleaning Data in Python",
+      "url": "https://app.datacamp.com/learn/skill-tracks/importing-cleaning-data-with-python",
+      "status": "Completed",
+      "achievementUrl": "https://www.datacamp.com/statement-of-accomplishment/track/bd0445656f0f0ac8422b1f0dd0da1a1b1a8d3891"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Uncovering the World's Oldest Businesses",
+      "url": "https://app.datacamp.com/learn/projects/2510",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/worlds-oldest-business/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Hypothesis Testing with Men's and Women's Soccer Matches",
+      "url": "https://app.datacamp.com/learn/projects/1611",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/hypothesis_testing_with_mens_and_womens_soccer_matches/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "When Was the Golden Era of Video Games?",
+      "url": "https://app.datacamp.com/learn/projects/2013",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/when_was_the_golden_era_of_video_games/guided/SQL",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Modeling Car Insurance Claim Outcomes",
+      "url": "https://app.datacamp.com/learn/projects/1645",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/modeling_car_insurance_claim_outcomes/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Predicting Movie Rental Durations",
+      "url": "https://app.datacamp.com/learn/projects/1796",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/predicting-movie-rental-durations/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Clustering Antarctic Penguin Species",
+      "url": "https://app.datacamp.com/learn/projects/1809",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/1809",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Predictive Modeling for Agriculture",
+      "url": "https://app.datacamp.com/learn/projects/1772",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/1772",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Analyzing Students' Mental Health",
+      "url": "https://app.datacamp.com/learn/projects/1593",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/analyzing_students_mental_health/guided/SQL",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Exploring Airbnb Market Trends",
+      "url": "https://app.datacamp.com/learn/projects/1589",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/exploring-airbnb-market-trends/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Analyzing Crime in Los Angeles",
+      "url": "https://app.datacamp.com/learn/projects/1876",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/1876",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Exploring NYC Public School Test Result Scores",
+      "url": "https://app.datacamp.com/learn/projects/1596",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/exploring_nyc_public_school_test_result_scores/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Visualizing the History of Nobel Prize Winners",
+      "url": "https://app.datacamp.com/learn/projects/1888",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/visualizing_the_history_of_nobel_prize_winners/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Exploring London's Travel Network",
+      "url": "https://app.datacamp.com/learn/projects/1805",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/exploring_londons_travel_network/guided/Snowflake",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Customer Analytics: Preparing Data for Modeling",
+      "url": "https://app.datacamp.com/learn/projects/1600",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/customer_analytics_preparing_data_for_modeling/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Planning a Trip to Paris with the OpenAI API",
+      "url": "https://app.datacamp.com/learn/projects/1849",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/1849",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "A Visual History of Nobel Prize Winners",
+      "url": "https://app.datacamp.com/learn/projects/441",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/visualizing_the_history_of_nobel_prize_winners/guided/Python",
+      "note": "Legacy completion entry redirects to the current Nobel project (1888); not counted as a separate unique case study.",
+      "solutionExported": false
+    },
+    {
+      "title": "Investigating Netflix Movies",
+      "url": "https://app.datacamp.com/learn/projects/1674",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/investigating_netflix/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Consolidating Employee Data",
+      "url": "https://app.datacamp.com/learn/projects/1581",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/consolidating_employee_data/guided/Python",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Naïve Bees: Predict Species from Images",
+      "url": "https://app.datacamp.com/learn/projects/412",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/2272",
+      "note": "Retired project URL redirects to a different, not-started project. Original completion is retained; replacement is not attributed to user.",
+      "solutionExported": false
+    },
+    {
+      "title": "Naïve Bees: Image Loading and Processing",
+      "url": "https://app.datacamp.com/learn/projects/374",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/2221",
+      "note": "Retired project redirects to a different not-started project (2221); original completion retained.",
+      "solutionExported": false
+    },
+    {
+      "title": "Analyze International Debt Statistics",
+      "url": "https://app.datacamp.com/learn/projects/754",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/1906",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Introduction to DataCamp Projects",
+      "url": "https://app.datacamp.com/learn/projects/571",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/introduction-to-projects/guided/SQL",
+      "note": "Completion verified in My Activity; solution export pending access.",
+      "solutionExported": false
+    },
+    {
+      "title": "Generating Keywords for Google Ads",
+      "url": "https://app.datacamp.com/learn/projects/400",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/2083",
+      "note": "Legacy completion redirects to revised project 2083, shown as not started; saved completion retained separately.",
+      "solutionExported": false
+    },
+    {
+      "title": "What and Where are the World's Oldest Businesses",
+      "url": "https://app.datacamp.com/learn/projects/1383",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/worlds-oldest-business/guided/Python",
+      "note": "Legacy oldest-businesses completion redirects to project 2510; preserve completion, avoid double-counting unique case studies.",
+      "solutionExported": false
+    },
+    {
+      "title": "Investigating Netflix Movies and Guest Stars in The Office",
+      "url": "https://app.datacamp.com/learn/projects/1237",
+      "status": "Completed",
+      "catalogueUrl": "https://app.datacamp.com/learn/projects/investigating_netflix/guided/Python",
+      "note": "Legacy Netflix and The Office completion redirects to current Netflix project1674; retain historical completion without claiming a separate current solution.",
+      "solutionExported": false
+    }
+  ]
+}
