@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Temporary typography review</title>
+<style>*{box-sizing:border-box}body{margin:0;padding:14px;background:#edf1f3;color:#102a43;font:14px/1.5 system-ui}header{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:8px}h1{font-size:17px;margin:0}select{font:inherit;padding:6px}#status{margin:8px 0}iframe{display:block;height:780px;border:1px solid #b6c2c8;background:#f6f3eb}</style></head>
+<body><header><h1>Typography review</h1><label>Language <select id="language"><option value="index.html">English</option><option value="index-ar.html">Arabic</option></select></label><label>Width <select id="width"><option>320</option><option selected>390</option><option>768</option><option>1024</option><option>1366</option></select></label></header><p id="status">Loading</p><iframe id="preview" title="Responsive homepage preview"></iframe>
+<script>
+const preview=document.querySelector('#preview'),width=document.querySelector('#width'),language=document.querySelector('#language'),status=document.querySelector('#status');
+function measure(){const doc=preview.contentDocument,win=preview.contentWindow,h=doc.querySelector('h1'),em=h.querySelector('em'),s=win.getComputedStyle(h),e=win.getComputedStyle(em);const overflow=Math.max(doc.documentElement.scrollWidth,doc.body.scrollWidth)-doc.documentElement.clientWidth;status.textContent=JSON.stringify({width:win.innerWidth,heading:s.fontFamily,size:s.fontSize,weight:s.fontWeight,spacing:s.letterSpacing,accent:e.fontFamily,style:e.fontStyle,accentLines:em.getClientRects().length,overflow,fontLoaded:[...doc.fonts].some(f=>f.status==='loaded'&&f.family.replaceAll('"','')===(language.value==='index.html'?'DM Sans':'Cairo'))});}
+function resize(){preview.style.width=(Number(width.value)+2)+'px';requestAnimationFrame(()=>requestAnimationFrame(measure));}
+preview.onload=async()=>{await preview.contentDocument.fonts.ready;resize();};
+language.addEventListener('change',()=>{status.textContent='Loading';preview.src=language.value+'?review=upright1';});width.addEventListener('change',resize);preview.style.width=(Number(width.value)+2)+'px';preview.src='index.html?review=upright1';
+</script></body></html>

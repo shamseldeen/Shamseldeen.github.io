@@ -6,6 +6,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .live-dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:#208461;margin-right:.4rem}
 .hero{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(2.5rem,5vw,5rem);padding-top:5rem;padding-bottom:5rem}
 .hero h1{font-size:clamp(3.2rem,5.35vw,5.8rem);line-height:1.02}.hero-intro{font-size:1.1rem}
+/* Keep the English homepage title upright, with room between letterforms. */
+html[lang="en"] .hero h1{font-size:clamp(2.75rem,4.7vw,4.7rem);font-weight:700;line-height:1.08;letter-spacing:-.04em}
+html[lang="en"] .hero h1 em{font-family:inherit;font-style:normal;font-weight:inherit}
 .hero-project{overflow:hidden;border:1px solid #c8d4cb;background:var(--paper);box-shadow:var(--shadow);border-radius:8px}
 .preview-topline,.preview-footer{display:flex;align-items:center;gap:.5rem;padding:1rem 1.35rem;font:500 .63rem 'IBM Plex Mono',monospace;letter-spacing:.04em}
 .preview-topline{border-bottom:1px solid var(--line)}.preview-topline>span:last-child{margin-left:auto;color:var(--muted)}
@@ -107,12 +110,14 @@ pre{margin:0;white-space:pre-wrap;background:var(--forest);color:#e2f2e8;padding
 
 @media(min-width:1600px){.case-hero,.case-section{padding-inline:max(8rem,calc((100vw - 1340px)/2))}}
 @media(max-width:1000px){
+ html[lang="en"] .hero h1{font-size:clamp(2.5rem,6.5vw,4.25rem)}
  .hero{grid-template-columns:1fr}.hero-copy{max-width:750px}.hero-project{max-width:720px}.hero h1{max-width:750px;font-size:clamp(3.2rem,7vw,5.5rem)}
  .case-hero-grid{grid-template-columns:minmax(0,1fr) 270px;gap:2rem}.case-hero h1{font-size:clamp(2.8rem,5.9vw,4.6rem)}
  .case-section .section-heading{align-items:start}.case-section .section-heading>p{max-width:640px}.method-grid{grid-template-columns:1fr 1fr}
  .supporting-grid{grid-template-columns:1fr}.supporting-grid .project-card{min-height:0}.supporting-grid .text-link{margin-top:1rem}.page-detail-body{grid-template-columns:1fr}
 }
 @media(max-width:720px){
+ html[lang="en"] .hero h1{font-size:clamp(1.875rem,10vw,3.75rem)}
  html{scroll-padding-top:10rem}.site-header{min-height:75px}.brand{font-size:.85rem;gap:.6rem}.brand-text small{font-size:.58rem}
  .site-header nav a{min-height:38px;display:flex;align-items:center}.hero{padding-top:3rem;gap:2.5rem}.hero h1{font-size:clamp(3rem,11vw,4.5rem)}
  .quick-facts{grid-template-columns:1fr 1fr 1fr;gap:.6rem}.quick-facts div{padding:0}.quick-facts dt{font-size:1.02rem}.quick-facts dd{font-size:.67rem}
