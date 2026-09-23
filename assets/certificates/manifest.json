@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Statistics Fundamentals in Python",
+    "kind": "track",
+    "date": "2023-12-07",
+    "credentialNumber": "#425,681",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/track/1e4c9aaea5d458d07364926a4f60ca109738139b",
+    "pdf": "assets/certificates/statistics-fundamentals.pdf",
+    "image": "assets/certificates/statistics-fundamentals.png",
+    "sha256": "c8c4dd03e3317f4825a98b6bff815d04acc5621580debbe0f5b729a6945f8681"
+  },
+  {
+    "title": "Data Analyst in Python",
+    "kind": "track",
+    "date": "2024-07-09",
+    "credentialNumber": "#491,660",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/track/00e39f99693f93b2e06ddba20993ed1e7c168936",
+    "pdf": "assets/certificates/data-analyst-python.pdf",
+    "image": "assets/certificates/data-analyst-python.png",
+    "sha256": "a1544d2d996fb1559d92d3646d97d85bcc161190214d225a6b53c0ddc4b49151"
+  },
+  {
+    "title": "Data Scientist in Python",
+    "kind": "track",
+    "date": "2024-03-14",
+    "credentialNumber": "#452,923",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/track/1edae6a3421a3368a9c043e0c63d81ea57df0865",
+    "pdf": "assets/certificates/data-scientist-python.pdf",
+    "image": "assets/certificates/data-scientist-python.png",
+    "sha256": "e08cdb0b97efe3bfd59d18cfb2c579a8827302c755ecac1f81aac62d41f4b1b8"
+  },
+  {
+    "title": "Data Visualization in Power BI",
+    "kind": "course",
+    "date": "2024-02-06",
+    "credentialNumber": "#32,573,351",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/course/3121dec5ec12f080ab914075854b481cac35bd23",
+    "pdf": "assets/certificates/data-visualization-power-bi.pdf",
+    "image": "assets/certificates/data-visualization-power-bi.png",
+    "sha256": "2f76bf0587cfd3fd88725baad13069804ce0c7827cec81c2e3592e60d8f1d805"
+  },
+  {
+    "title": "Importing & Cleaning Data in Python",
+    "kind": "track",
+    "date": "2023-11-08",
+    "credentialNumber": "#417,144",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/track/bd0445656f0f0ac8422b1f0dd0da1a1b1a8d3891",
+    "pdf": "assets/certificates/importing-cleaning-python.pdf",
+    "image": "assets/certificates/importing-cleaning-python.png",
+    "sha256": "c283fc3df147d95714f60febe223dccd26068b1a1d77294539a0608536f11eda"
+  },
+  {
+    "title": "Supervised Learning with scikit-learn",
+    "kind": "course",
+    "date": "2023-10-04",
+    "credentialNumber": "#30,280,387",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/course/8731c0fbb58a63582bf0c4356fa0b27fb8e8e7dc",
+    "pdf": "assets/certificates/supervised-learning-scikit-learn.pdf",
+    "image": "assets/certificates/supervised-learning-scikit-learn.png",
+    "sha256": "e0efcd3f5d76956bbb4b828d6bce4673201b1cbdac7104a89f9dd2f91a07ca44"
+  },
+  {
+    "title": "Intermediate SQL",
+    "kind": "course",
+    "date": "2023-09-04",
+    "credentialNumber": "#30,264,038",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/course/2d040f16e2215f015e195ea0ffd631cc2cc3ddf5",
+    "pdf": "assets/certificates/intermediate-sql.pdf",
+    "image": "assets/certificates/intermediate-sql.png",
+    "sha256": "796432a73099a0875feb50759ff4dd2d2e8be176a27add994ae2a59ec6768ca1"
+  },
+  {
+    "title": "Data Manipulation in Python",
+    "kind": "track",
+    "date": "2024-02-27",
+    "credentialNumber": "#448,454",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/track/4137bdd109b1e9d414d4b7ce618846625cfabbb6",
+    "pdf": "assets/certificates/data-manipulation-python.pdf",
+    "image": "assets/certificates/data-manipulation-python.png",
+    "sha256": "f1cd738d7837b3104977b3d0bbca6708df42354e76aa5977392af0380e09a059"
+  },
+  {
+    "title": "Python Data Fundamentals",
+    "kind": "track",
+    "date": "2024-07-09",
+    "credentialNumber": "#491,659",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/track/2d309557ba14f2345840e451c34a37d1c910c4f9",
+    "pdf": "assets/certificates/python-data-fundamentals.pdf",
+    "image": "assets/certificates/python-data-fundamentals.png",
+    "sha256": "deb114f78becdd200d5f43a7b9732b90aa4dbe0e56b2660c1f22570567f2a628"
+  },
+  {
+    "title": "Data Manipulation with pandas",
+    "kind": "course",
+    "date": "2023-07-31",
+    "credentialNumber": "#29,913,629",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/course/23905568883f41686803067e91d039c679c4a94b",
+    "pdf": "assets/certificates/data-manipulation-pandas.pdf",
+    "image": "assets/certificates/data-manipulation-pandas.png",
+    "sha256": "35f71d3fbe8b6968208afeaa277549d65fcc52d8daec3602ca6b1cf43b96ec52"
+  },
+  {
+    "title": "SQL Fundamentals",
+    "kind": "track",
+    "date": "2024-04-07",
+    "credentialNumber": "#460,111",
+    "verifyUrl": "https://www.datacamp.com/statement-of-accomplishment/track/bdf2ff0988ad17c29c3fd970b4c16223510ed599",
+    "pdf": "assets/certificates/sql-fundamentals.pdf",
+    "image": "assets/certificates/sql-fundamentals.png",
+    "sha256": "c3401da3424792a5cf1201cf821b9085a89b0924dd2611270e127f321edbffb8"
+  }
+]
