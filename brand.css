@@ -57,6 +57,17 @@
   border-color: var(--brand-emerald);
 }
 
+.button-with-icon {
+  gap: .5rem;
+}
+
+.button-with-icon .button-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
 .site-header .brand-text small {
   margin: 0;
   font-size: 11px;
