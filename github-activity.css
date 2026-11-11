@@ -1,0 +1,10 @@
+/* "Latest on GitHub": compact cards that reuse .project-card from style.css. */
+#github-activity { padding-top: 0; }
+.gh-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.gh-card { min-height: 0; padding: 1.5rem; background: var(--paper, #fff); }
+.gh-card h3 { font-size: 1.3rem; margin: 0 0 .6rem; overflow-wrap: anywhere; }
+.gh-card p { margin: 0 0 1rem; font-size: .95rem; }
+.gh-topics { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1.2rem; padding: 0; list-style: none; }
+.gh-topics li { padding: .2rem .5rem; border: 1px solid var(--line, #dde3df); border-radius: 99px; font: 400 .68rem "IBM Plex Mono", monospace; color: var(--muted, #5b6b66); }
+.gh-card .card-links { flex-wrap: wrap; gap: 1rem 1.5rem; }
+.gh-card h3, .gh-desc, .gh-topics, html[lang=ar] .gh-card .gh-desc { text-align: left; }
