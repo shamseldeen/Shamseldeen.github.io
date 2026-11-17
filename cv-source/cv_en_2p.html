@@ -38,7 +38,8 @@
 <ul>
 <li>Ingested 72 source tables (60,234,021 rows) into a Lakehouse with PySpark, reconciled to source with zero difference, and cleaned 58 Silver tables.</li>
 <li>Designed a Gold star schema (9 dimensions, 9 facts, 4 analytical tables) rebuilt by 23 stored procedures in about 2 minutes; versioned with Fabric Git integration.</li>
-<li>Built a 6-page Direct Lake Power BI report showing that 248 products bought at about 2.5x their list price cause 99.8% of the loss below cost; found and fixed a scoring bug in my own Gold layer before publishing.</li>
+<li>Built a 6-page Direct Lake Power BI report showing that 248 products bought for more than their selling price cause 99.8% of the loss below cost (114M SAR, 2020–2025); found and fixed a scoring bug in my own Gold layer before publishing.</li>
+<li>Added a real-time layer (Eventstream, KQL Eventhouse, Activator): receipts from 18 branches minute by minute; in a test, a stopped branch triggered an email alert within 5 minutes.</li>
 <li>Applied pharmacy judgment to the analysis: customer returns kept out of staff scoring, no invented expiry metric where data was missing, and no person blamed without evidence (7 integrity signals tested against chance).</li>
 <li>Case study: shamsinsights.com/pharmacy-dw.html | Code: github.com/shamseldeen/pharmacy-enterprise-data-warehouse</li>
 </ul>
